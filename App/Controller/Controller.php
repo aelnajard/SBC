@@ -10,18 +10,14 @@ require_once('../../App/Models/UserActions.php');
 require_once('../../App/Models/Users.php');
 
 function getIp(){
-
   $geoplugin = new geoPlugin();
   $geoplugin->locate();
-  $geoplugin->ip;
-
-  return $ip;
+  return $geoplugin->ip;
 }
 
 if ($_POST['module'] == 'setIp') {
 
- $geoplugin = new geoPlugin();
- $geoplugin->locate();
+
  $ip = getIp();
 
  $userActions = new UsersActions(new Database());
