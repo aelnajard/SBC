@@ -9,25 +9,33 @@ require_once('../../App/Lib/geoplugin.class.php');
 require_once('../../App/Models/UserActions.php');
 require_once('../../App/Models/Users.php');
 
+function getIp(){
+
+  $geoplugin = new geoPlugin();
+  $geoplugin->locate();
+  $geoplugin->ip;
+
+  return $ip;
+}
 
 if ($_POST['module'] == 'setIp') {
 
  $geoplugin = new geoPlugin();
  $geoplugin->locate();
- $geoplugin->ip;
+ $ip = getIp();
 
  $userActions = new UsersActions(new Database());
- $userActions->setIp($geoplugin->ip);
+ $userActions->setIp($ip);
  $countIp = $userActions->countUsersActionsByIp()["COUNT(*)"];
 
   if ($countIp > 0) {
     $userActions = new UsersActions(new Database());
-    $userActions->setIp($geoplugin->ip);
+    $userActions->setIp($ip);
     $idUser = $userActions->getIdUser()->idUser;
 
     $userActions = new UsersActions(new Database());
     $userActions->setIdUser($idUser);
-    $userActions->setIp($geoplugin->ip);
+    $userActions->setIp($ip);
     $userActions->setCity($geoplugin->city);
     $userActions->createUserActionIp();
   }
@@ -42,7 +50,7 @@ if ($_POST['module'] == 'setIp') {
 
     $userActions = new UsersActions(new Database());
     $userActions->setIdUser($idUser);
-    $userActions->setIp($geoplugin->ip);
+    $userActions->setIp($ip);
     $userActions->setCity($geoplugin->city);
     $userActions->createUserActionIp();
   }
@@ -66,6 +74,8 @@ else if ($_POST['module'] == 'unityLoginData') {
   $geoplugin = new geoPlugin();
   $geoplugin->locate();
   $geoplugin->ip;
+
+
   echo "string".$_POST['email'].$_POST['NIT'].$geoplugin->ip;
 }
 
