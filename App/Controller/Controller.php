@@ -52,7 +52,7 @@ else if ($_POST['module'] == 'download') {
   $geoplugin = new geoPlugin();
   $geoplugin->locate();
   $geoplugin->ip;
-
+ 
   $userActions = new UsersActions(new Database());
   $userActions->setIp($geoplugin->ip);
   $idUserAction = $userActions->getIdUserAction()->idUserActions;
