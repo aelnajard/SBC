@@ -15,38 +15,47 @@ function getIp(){
   return $geoplugin->ip;
 }
 
+/*User Action Table*/
+function countUsersActionsByIpFromUA(){//UA -> User Action
+  $userActions = new UsersActions(new Database());
+  $userActions->setIp(getIp());
+  $countIp = $userActions->countUsersActionsByIp()["COUNT(*)"];
+}
+function getIdUserFromUA(){//UA -> User Action
+  $userActions = new UsersActions(new Database());
+  $userActions->setIp(getIp());
+  $idUser = $userActions->getIdUser()->idUser;
+}
+function createUserActionIp(){
+  $userActions = new UsersActions(new Database());
+  $userActions->setIdUser($idUser);
+  $userActions->setIp(getIp());
+  $userActions->setCity($geoplugin->city);
+  $userActions->createUserActionIp();
+}
+
+/*User*/
+function createUserFromU(){//U -> User
+  $user = new Users(new Database());
+  $user->setEmail("");
+  $user->setNIT("");
+  $user->createUser();
+}
+
 if ($_POST['module'] == 'setIp') {
-
-
- $ip = getIp();
-
- $userActions = new UsersActions(new Database());
- $userActions->setIp($ip);
- $countIp = $userActions->countUsersActionsByIp()["COUNT(*)"];
-
+   countUsersActionsByIpFromUA();
   if ($countIp > 0) {
-    $userActions = new UsersActions(new Database());
-    $userActions->setIp($ip);
-    $idUser = $userActions->getIdUser()->idUser;
-
-    $userActions = new UsersActions(new Database());
-    $userActions->setIdUser($idUser);
-    $userActions->setIp($ip);
-    $userActions->setCity($geoplugin->city);
-    $userActions->createUserActionIp();
+    getIdUserFromUA();
   }
   else {
-    $user = new Users(new Database());
-    $user->setEmail("");
-    $user->setNIT("");
-    $user->createUser();
+    createUserFromU();
 
     $user = new Users(new Database());
     $idUser = $user->lastIdUser()->idUser;
 
     $userActions = new UsersActions(new Database());
     $userActions->setIdUser($idUser);
-    $userActions->setIp($ip);
+    $userActions->setIp(getIp());
     $userActions->setCity($geoplugin->city);
     $userActions->createUserActionIp();
   }
