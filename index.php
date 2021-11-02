@@ -423,9 +423,14 @@ function getIp(){
 		success: function(data){
 			alert(data);
 	 }
-	} 
+	}
  )
 }
+
+document.getElementById('download').addEventListener('click', e => {
+	alert("hola");
+}
+);
 
 
 </script>
