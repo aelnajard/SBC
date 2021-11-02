@@ -55,7 +55,7 @@ if ($_POST['module'] == 'setIp') {
 
 else if ($_POST['module'] == 'download') {
 
- echo "hola";
+ echo "holatu";
 
 }
 
