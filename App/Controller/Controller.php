@@ -25,9 +25,9 @@ if ($_POST['module'] == 'setIp') {
   if ($countIp > 0) {
     $userActions = new UsersActions(new Database());
     $userActions->setIp($geoplugin->ip);
-    $idUser = $userActions->getIdUser();
+    $idUser = $userActions->getIdUser()->idUser;
 
-    echo json_encode($idUser);
+    echo $idUser;
 
   /*  $userActions = new UsersActions(new Database());
     $userActions->setIdUser($idUser);
