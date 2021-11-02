@@ -421,14 +421,23 @@ function getIp(){
 			module: "setIp"
 		},
 		success: function(data){
-			alert(data);
 	 }
 	}
  )
 }
 
 document.getElementById('download').addEventListener('click', e => {
-	alert("hola");
+	$.ajax( "App/Controller/Controller.php", {
+		type: 'post',
+		async: false,
+		data: {
+			module: "download"
+		},
+		success: function(data){
+			alert(data);
+	 }
+	}
+ )
 }
 );
 
