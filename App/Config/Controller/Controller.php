@@ -11,7 +11,7 @@ require_once('../Lib/geoplugin.class.php');
 
 $geoplugin = new geoPlugin();
 $geoplugin->locate();
-echo $geoplugin->ip;
+echo $geoplugin->city;
 
 
  ?>
