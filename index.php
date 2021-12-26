@@ -185,7 +185,7 @@
 
 	<section class="ToDo">
 
-		<h2> Que tipo de cosas puedes hacer? hola</h2>
+		<h2> Que tipo de cosas puedes hacer? </h2>
 
 		<div class="ToDo-L">
 
