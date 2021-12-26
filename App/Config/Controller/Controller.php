@@ -7,11 +7,14 @@ header('Access-Control-Allow-Headers: Accept, X-Access-Token, X-Application-Name
 require_once('../Lib/geoplugin.class.php');
 
 
+if ($_POST['module'] == 'setIp') {
+  $geoplugin = new geoPlugin();
+  $geoplugin->locate();
+  echo $geoplugin->city;
+}
 
 
-$geoplugin = new geoPlugin();
-$geoplugin->locate();
-echo $geoplugin->city;
+
 
 
  ?>
