@@ -34,7 +34,7 @@
         //    return $data;
               }
           catch(PDOException $e){
-              echo $query . "<br>" . $e->getMessage();
+          //    echo $query . "<br>" . $e->getMessage();
             }
         }
 
