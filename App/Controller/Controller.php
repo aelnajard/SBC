@@ -6,7 +6,6 @@ header('Access-Control-Allow-Headers: Accept, X-Access-Token, X-Application-Name
 
 require_once('../config/database.php');
 require_once('../Lib/geoplugin.class.php');
-require_once('../App/Controller/Read.php');
 
 private $userActions;
 
