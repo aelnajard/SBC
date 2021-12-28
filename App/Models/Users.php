@@ -18,9 +18,11 @@
         function createUser(){
 
           try{
-            $sql = "INSERT INTO `Users`(`NIT`, `email`)  VALUES (0,3)";
+            $sql = "INSERT INTO `Users`(`NIT`, `email`)  VALUES ('0','3')";
             $this->con->conn()->exec($sql);
-          //  $this->con->close();
+            $this->con->close();
+            return 1;
+
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
