@@ -13,9 +13,9 @@ require_once('../../App/Models/UserActions.php');
 private $userActions;
 
 function queryUserActions(){
-  $db = new Database();
-  $userActions = new UsersActions($db);
-  $this->userActions = $userActions;
+//  $db = new Database();
+//  $userActions = new UsersActions($db);
+  //$this->userActions = $userActions;
 }
 
 if ($_POST['module'] == 'setIp') {
