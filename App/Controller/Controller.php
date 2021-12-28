@@ -11,13 +11,11 @@ require_once('../../App/Models/UserActions.php');
 if ($_POST['module'] == 'setIp') {
 
  $geoplugin = new geoPlugin();
-   $geoplugin->locate();
-  $geoplugin->ip;
-  echo $geoplugin->ip;
+ $geoplugin->locate();
+ $geoplugin->ip;
 
+  $userActions = new UsersActions(new Database());
 
-  $db = new Database();
-  $userActions = new UsersActions($db);
   //$this->userActions->setIp($geoplugin->ip);*/
   //$this->userActions->countUsersActionsIp()["COUNT(*)"];
 
