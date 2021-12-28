@@ -423,7 +423,7 @@ function getIp(){
 		success: function(data){
 			alert(data);
 	 }
-	}
+	} 
  )
 }
 
