@@ -19,10 +19,7 @@
 
           try{
             $sql = "INSERT INTO `Users`(`NIT`, `email`)
-                  VALUES (
-                    `3`,
-                    `5`
-                  )";
+                  VALUES (3,5)";
             $this->con->conn()->exec($sql);
           //  $this->con->close();
               }
