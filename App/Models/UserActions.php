@@ -5,7 +5,7 @@
       private $ip;
 
 
-      private $sessionNumber;
+/*      private $sessionNumber;
       private $timeLogin;
       private $timeExit;
       private $enterFair;
@@ -24,7 +24,7 @@
       }
     function setIp($ip){
         $this->ip = $ip;
-      }
+      }*/
 
 /*
       function setContactUs($contactUs){
