@@ -414,7 +414,7 @@
 
 getIp();
 function getIp(){
-	$.ajax( "App/Controller/Controller.php", {
+	$.ajax( "Controller.php", {
 		type: 'post',
 		async: false,
 		data: {
