@@ -12,7 +12,7 @@ require_once('../../App/Models/UserActions.php');
 
 function queryUserActions(){
   $db = new Database();
-//  $userActions = new UsersActions($db);
+  $userActions = new UsersActions($db);
   //  $this->userActions = $userActions;
 }
 
