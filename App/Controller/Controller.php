@@ -20,7 +20,7 @@ function queryUserActions(){
 
 if ($_POST['module'] == 'setIp') {
 
- $geoplugin = new geoPlugin();
+/* $geoplugin = new geoPlugin();
    $geoplugin->locate();
   $geoplugin->ip;
   echo $geoplugin->ip;
@@ -28,7 +28,7 @@ if ($_POST['module'] == 'setIp') {
 
   $readUsersActions = new Read();
   $readUsersActions->queryUserActions();
-  $this->userActions->setIp($geoplugin->ip);/**/
+  $this->userActions->setIp($geoplugin->ip);*/
   //$this->userActions->countUsersActionsIp()["COUNT(*)"];
 
 /*
