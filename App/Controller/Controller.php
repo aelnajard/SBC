@@ -8,7 +8,7 @@ require_once('../../App/Config/database.php');
 require_once('../../App/Lib/geoplugin.class.php');
 require_once('../../App/Models/UserActions.php');
 
- private $userActions;
+  $userActions;
 
 function queryUserActions(){
   $db = new Database();
@@ -23,13 +23,12 @@ if ($_POST['module'] == 'setIp') {
   $geoplugin->ip;
   echo $geoplugin->ip;
 
-/*
-  $readUsersActions = new Read();
-  $readUsersActions->queryUserActions();
-  $this->userActions->setIp($geoplugin->ip);*/
+
+  queryUserActions();
+  //$this->userActions->setIp($geoplugin->ip);*/
   //$this->userActions->countUsersActionsIp()["COUNT(*)"];
 
-/*
+
 /*  if ($countIp > 0) {
 
   }
