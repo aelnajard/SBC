@@ -7,7 +7,7 @@ header('Access-Control-Allow-Headers: Accept, X-Access-Token, X-Application-Name
 //require_once('../Config/database.php');
 //require_once('../Lib/geoplugin.class.php');
 echo "string";
-private $userActions;
+//private $userActions;
 
 /*function queryUserActions(){
   $db = new Database();
