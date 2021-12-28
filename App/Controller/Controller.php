@@ -10,13 +10,13 @@ require_once('../../App/Models/UserActions.php');
 
 
 
-private $userActions;
+//private $userActions;
 
-function queryUserActions(){
+//function queryUserActions(){
 //  $db = new Database();
 //  $userActions = new UsersActions($db);
   //$this->userActions = $userActions;
-}
+//}
 
 if ($_POST['module'] == 'setIp') {
 
