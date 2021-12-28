@@ -20,8 +20,8 @@
           try{
             $sql = "INSERT INTO `Users`(`NIT`, `email`)
                   VALUES (
-                    `$this->NIT`,
-                    `$this->email`
+                    `3`,
+                    `5`
                   )";
             $this->con->conn()->exec($sql);
           //  $this->con->close();
