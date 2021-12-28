@@ -16,13 +16,15 @@
           $this->NIT = $NIT;
         }
         function createUser(){
+          $NIT = $this->NIT;
+          $email = $this->email;
           try{
             $sql = "INSERT INTO `Users`(`NIT`, `email`)
                   VALUES (
-                    '$this->NIT',
-                    '$this->email'
+                    $NIT,
+                    $email
                   )";
-          //  $this->con->conn()->exec($sql);
+            $this->con->conn()->exec($sql);
           //  $this->con->close();
               }
           catch(PDOException $e){
