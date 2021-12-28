@@ -17,10 +17,10 @@ echo "string";
 
 if ($_POST['module'] == 'setIp') {
 
-  $geoplugin = new geoPlugin();
-  $geoplugin->locate();
-  $geoplugin->ip;
-  echo $geoplugin->ip;
+//  $geoplugin = new geoPlugin();
+//  $geoplugin->locate();
+//  $geoplugin->ip;
+//  echo $geoplugin->ip;
 
 /*
   $readUsersActions = new Read();
