@@ -17,14 +17,14 @@
       private $thingWouldLike;
       private $contacUs;*/
 
-      private $con;
+  /*    private $con;
 
       function __construct($con) {
           $this->con = $con;
       }
       function setIp($ip){
         $this->ip = $ip;
-      }
+      }*/
 
 /*
       function setContactUs($contactUs){
