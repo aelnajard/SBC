@@ -24,6 +24,7 @@
       }
     function setIp($ip){
         $this->ip = $ip;
+        echo $this->ip;
       }
 
 /*
