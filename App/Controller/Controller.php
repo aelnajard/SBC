@@ -7,6 +7,8 @@ header('Access-Control-Allow-Headers: Accept, X-Access-Token, X-Application-Name
 require_once('../../App/Config/database.php');
 require_once('../../App/Lib/geoplugin.class.php');
 require_once('../../App/Models/UserActions.php');
+require_once('../../App/Models/Users.php');
+
 
 if ($_POST['module'] == 'setIp') {
 
@@ -19,12 +21,12 @@ if ($_POST['module'] == 'setIp') {
  $countIp = $userActions->countUsersActionsByIp()["COUNT(*)"];
 
 
-  if ($countIp == 0) {
-    echo json_encode ($countIp);
+  if ($countIp > 0) {
 
   }
   else {
-
+    $userActions = new Users(new Database());
+  //$countIp = $userActions->countUsersActionsByIp()["COUNT(*)"];
   }
 
 
