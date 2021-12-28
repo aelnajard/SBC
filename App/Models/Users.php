@@ -16,13 +16,12 @@
           $this->NIT = $NIT;
         }
         function createUser(){
-          $NIT = $this->NIT;
-          $email = $this->email;
+
           try{
             $sql = "INSERT INTO `Users`(`NIT`, `email`)
                   VALUES (
-                    $NIT,
-                    $email
+                    `$this->NIT`,
+                    `$this->email`
                   )";
             $this->con->conn()->exec($sql);
           //  $this->con->close();
