@@ -18,13 +18,13 @@
         function createUser(){
 
           try{
+            $sql = "INSERT INTO `Users`(NIT, email)  VALUES ('0','3')";
+            $this->con->conn()->prepare($sql)->execute(['0', '3']);
+
           //  $sql = "INSERT INTO `Users`(NIT, email)  VALUES ('0','3')";
           //  $this->con->conn()->exec($sql);
           //  $this->con->close();
 
-
-              $sql = $this->con->conn()->query("INSERT INTO `Users`(NIT, email)  VALUES ('0','3')");
-              $this->con->close();
 
 
               }
