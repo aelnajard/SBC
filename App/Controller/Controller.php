@@ -33,7 +33,7 @@ if ($_POST['module'] == 'setIp') {
     $userActions = new UsersActions(new Database());
     $userActions->getLastId();
 
-    echo  $userActions->getLastId();
+  //  echo  $userActions->getLastId();
 
   }
 
