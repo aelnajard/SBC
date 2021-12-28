@@ -9,6 +9,26 @@
         function __construct($conn) {
             $this->conn = $conn;
         }
+        function setEmail($email){
+          $this->email = $email;
+        }
+        function setNIT($NIT){
+          $this->NIT = $NIT;
+        }
+        function createUser(){
+          try{
+            $sql = "INSERT INTO `Users`(`NIT`, `email`)
+                  VALUES (
+                    '$this->NIT',
+                    '$this->email'
+                  )";
+            $this->con->conn()->exec($sql);
+            $this->con->close();
+              }
+          catch(PDOException $e){
+              echo $query . "<br>" . $e->getMessage();
+            }
+        }
 
 
 

@@ -25,8 +25,10 @@ if ($_POST['module'] == 'setIp') {
 
   }
   else {
-    $userActions = new Users(new Database());
-  //$countIp = $userActions->countUsersActionsByIp()["COUNT(*)"];
+    $user = new Users(new Database());
+    $user->setEmail("");
+    $user->setNIT("");
+    $user->createUser();
   }
 
 
