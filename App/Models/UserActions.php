@@ -4,7 +4,7 @@
       private $idUserAction;
       private $ip;
 
-/*
+
       private $sessionNumber;
       private $timeLogin;
       private $timeExit;
@@ -15,7 +15,7 @@
       private $dislikes;
       private $improvements;
       private $thingWouldLike;
-      private $contacUs;*/
+      private $contacUs;
 
   /*    private $con;
 
