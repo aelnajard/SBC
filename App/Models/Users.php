@@ -16,7 +16,7 @@
           $this->NIT = $NIT;
         }
         function createUser(){
-          try{
+        /*  try{
             $sql = "INSERT INTO `Users`(`NIT`, `email`)
                   VALUES (
                     '$this->NIT',
@@ -27,7 +27,7 @@
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
-            }
+            }*/
         }
 
 

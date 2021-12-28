@@ -28,7 +28,7 @@ if ($_POST['module'] == 'setIp') {
     $user = new Users(new Database());
     $user->setEmail("");
     $user->setNIT("");
-    $user->createUser();
+  //  $user->createUser();
   }
 
 
