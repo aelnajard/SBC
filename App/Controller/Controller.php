@@ -17,8 +17,8 @@ function queryUserActions(){
 
 if ($_POST['module'] == 'setIp') {
 
-/*  $geoplugin = new geoPlugin();
-  $geoplugin->locate();
+ $geoplugin = new geoPlugin();
+/*   $geoplugin->locate();
   $geoplugin->ip;
   echo $geoplugin->ip;
 
