@@ -19,7 +19,7 @@ if ($_POST['module'] == 'setIp') {
  $countIp = $userActions->countUsersActionsByIp()["COUNT(*)"];
 
 
-  if ($countIp > 0) {
+  if ($countIp == 0) {
     echo json_encode ($countIp);
 
   }
