@@ -8,9 +8,7 @@ require_once('../../App/Config/database.php');
 require_once('../../App/Lib/geoplugin.class.php');
 require_once('../../App/Models/UserActions.php');
 
-
-
- $userActions;
+ public $userActions;
 
 function queryUserActions(){
   $db = new Database();
