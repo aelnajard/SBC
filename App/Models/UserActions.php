@@ -2,18 +2,20 @@
     class UsersActions {
       private $idUser;
       private $idUserAction;
+      private $ip;
+
+/*
       private $sessionNumber;
       private $timeLogin;
       private $timeExit;
       private $enterFair;
       private $enterCheckOut;
       private $didTheOrder;
-      private $ip;
       private $likes;
       private $dislikes;
       private $improvements;
       private $thingWouldLike;
-      private $contacUs;
+      private $contacUs;*/
 
       private $con;
 
