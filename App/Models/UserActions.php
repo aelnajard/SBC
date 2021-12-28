@@ -26,8 +26,8 @@
         $this->ip = $ip;
         echo $this->ip;
       }
-    //  function countUsersActionsByIp(){
-      /* try{
+      function countUsersActionsByIp(){
+       try{
         $sql = $this->con->conn()->query("SELECT COUNT(*)  FROM `UserActions` WHERE ip = '$this->ip'  ");
           $data = $sql->fetch(PDO::FETCH_ASSOC);
           $this->con->close();
@@ -35,8 +35,8 @@
             }
         catch(PDOException $e){
             echo $query . "<br>" . $e->getMessage();
-          }*/
-    //  }
+          }
+      }
 
 /*
       function setContactUs($contactUs){
