@@ -17,7 +17,7 @@
         }
         function createUser(){
           try{
-            $sql = "INSERT INTO `Users`(`NIT`, `email`)  VALUES ('0','3')";
+            $sql = "INSERT INTO `Users`(`NIT`, `email`)  VALUES (0,8)";
             $this->conn->conn()->exec($sql);
             $this->conn->close();
               }
