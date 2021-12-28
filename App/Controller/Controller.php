@@ -10,7 +10,7 @@ require_once('../../App/Models/UserActions.php');
 
 
 
-//private $userActions;
+private $userActions;
 
 //function queryUserActions(){
 //  $db = new Database();
