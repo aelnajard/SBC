@@ -29,6 +29,12 @@ if ($_POST['module'] == 'setIp') {
     $user->setEmail("");
     $user->setNIT("");
     $user->createUser();
+
+    $userActions = new UsersActions(new Database());
+    $userActions->getLastId();
+
+    echo  $userActions->getLastId();
+
   }
 
 
