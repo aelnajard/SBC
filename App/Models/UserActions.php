@@ -22,9 +22,21 @@
       function __construct($con) {
           $this->con = $con;
       }
-    function setIp($ip){
+      function setIp($ip){
         $this->ip = $ip;
         echo $this->ip;
+      }
+
+      function countUsersActionsByIp(){
+       try{
+        $sql = $this->con->conn()->query("SELECT COUNT(*)  FROM `UserActions` WHERE ip = '$this->ip'  ");
+          $data = $sql->fetch(PDO::FETCH_ASSOC);
+          $this->con->close();
+          return $data;
+            }
+        catch(PDOException $e){
+            echo $query . "<br>" . $e->getMessage();
+          }
       }
 
 /*

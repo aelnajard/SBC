@@ -16,8 +16,9 @@ if ($_POST['module'] == 'setIp') {
 
  $userActions = new UsersActions(new Database());
  $userActions->setIp($geoplugin->ip);
-  //$this->userActions->countUsersActionsIp()["COUNT(*)"];
+ $countIp->countUsersActionsByIp()["COUNT(*)"];
 
+ echo json_encode ($countIp);
 
 /*  if ($countIp > 0) {
 
