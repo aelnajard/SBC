@@ -22,9 +22,9 @@
       function __construct($con) {
           $this->con = $con;
       }
-/*    function setIp($ip){
+    function setIp($ip){
         $this->ip = $ip;
-      }*/
+      }
 
 /*
       function setContactUs($contactUs){
