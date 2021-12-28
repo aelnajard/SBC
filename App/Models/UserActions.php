@@ -24,7 +24,6 @@
       }
       function setIp($ip){
         $this->ip = $ip;
-        echo $this->ip;
       }
       function countUsersActionsByIp(){
        try{
