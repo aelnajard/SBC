@@ -60,9 +60,9 @@ else if ($_POST['module'] == 'download') {
 
   $userActions = new UsersActions(new Database());
   $userActions->setIp($geoplugin->ip);
-  $idUserAction = $userActions->getIdUserAction()->idUserAction;
+  $idUserAction = $userActions->getIdUserAction();
 
-  echo $idUserAction;
+  echo  json_encode($idUserAction);
 
 
 
