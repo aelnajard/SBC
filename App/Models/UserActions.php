@@ -29,6 +29,10 @@
       function setIp($ip){
         $this->ip = $ip;
       }
+      function setIdUserAction($idUserAction){
+        $this->idUserAction = $idUserAction;
+      }
+
       function setDownload($download){
         $this->download = $download;
       }
@@ -83,13 +87,12 @@
          }
     }
 
-    /*  function updatePhone(){
+      function updateDownload(){
         try{
           $sql = "UPDATE
           `UserActions`
           SET `download` =  '$this->download'
-
-          WHERE `idUser` = '$this->idUser'
+          WHERE `idUserAction` = '$this->idUserAction'
           ";
           $this->con->conn()->exec($sql);
           $this->con->close();
@@ -97,7 +100,7 @@
         catch(PDOException $e){
             echo $query . "<br>" . $e->getMessage();
           }
-      }*/
+      }
 
 /*
       function setContactUs($contactUs){

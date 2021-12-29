@@ -62,9 +62,12 @@ else if ($_POST['module'] == 'download') {
   $userActions->setIp($geoplugin->ip);
   $idUserAction = $userActions->getIdUserAction()->idUserActions;
 
-  //echo $geoplugin->ip;
 
-  echo  $idUserAction;
+  $userActions = new UsersActions(new Database());
+  $userActions->setIdUserAction($idUserAction);
+  $userActions->setDownload(1);
+  $userActions->updateDownload();
+
 
 
 
