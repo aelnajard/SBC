@@ -29,12 +29,14 @@ function countUsersActionsByIpFromUA(){//UA -> User Action
 
   return $countIp;
 }
+
 function getIdUserFromUA(){//UA -> User Action
   $userActions = new UsersActions(new Database());
   $userActions->setIp(getIp());
   $idUser = $userActions->getIdUser()->idUser;
   return $idUser;
 }
+
 function createUserActionIpFromUsers($idUser){
   $userActions = new UsersActions(new Database());
   $userActions->setIdUser($idUser);
