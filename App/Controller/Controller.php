@@ -31,7 +31,7 @@ if ($_POST['module'] == 'setIp') {
     $user->createUser();
 
     $user = new Users(new Database());
-    echo json_encode(  $user->lastIdUser() );
+    echo json_encode(  $user->lastIdUser()["idUser"] );
   }
 
 
