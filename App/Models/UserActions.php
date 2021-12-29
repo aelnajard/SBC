@@ -40,6 +40,18 @@
           }
       }
 
+      function getIdUser(){
+        try{
+           $sql = $this->conn->conn()->query("SELECT `idUser` FROM `UserActions` WHERE `ip` = '$this->ip' ORDER BY `idUserActions` DESC LIMIT 1");
+           $data = $sql->fetch(PDO::FETCH_OBJ);
+           $this->conn->close();
+           return $data;
+           }
+         catch(PDOException $e){
+             echo $query . "<br>" . $e->getMessage();
+           }
+      }
+
 
 
 

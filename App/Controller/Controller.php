@@ -23,7 +23,15 @@ if ($_POST['module'] == 'setIp') {
  echo $countIp;
 
   if ($countIp > 0) {
-    echo "hola";
+    $userActions = new UsersActions(new Database());
+    $userActions->setIp($geoplugin->ip);
+    $idUser = $userActions->getIdUser();
+
+    $userActions = new UsersActions(new Database());
+    $userActions->setIdUser($idUser);
+    $userActions->setIp($geoplugin->ip);
+    $userActions->createUserActionIp();
+
   }
   else {
     $user = new Users(new Database());
