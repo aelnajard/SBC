@@ -48,7 +48,6 @@ if ($_POST['module'] == 'setIp') {
     $userActions->setIp($geoplugin->ip);
     $userActions->setCity($geoplugin->city);
     $userActions->createUserActionIp();
-
   }
 }
 
@@ -66,7 +65,6 @@ else if ($_POST['module'] == 'download') {
   $userActions->setIdUserAction($idUserAction);
   $userActions->setDownload(1);
   $userActions->updateDownload();
-
 }
 
 
