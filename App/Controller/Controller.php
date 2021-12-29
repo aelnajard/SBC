@@ -16,11 +16,9 @@ if ($_POST['module'] == 'setIp') {
  $geoplugin->locate();
  $geoplugin->ip;
 
-
  $userActions = new UsersActions(new Database());
  $userActions->setIp($geoplugin->ip);
  $countIp = $userActions->countUsersActionsByIp()["COUNT(*)"];
-
 
   if ($countIp > 0) {
     $userActions = new UsersActions(new Database());
@@ -32,7 +30,6 @@ if ($_POST['module'] == 'setIp') {
     $userActions->setIp($geoplugin->ip);
     $userActions->setCity($geoplugin->city);
     $userActions->createUserActionIp();
-
   }
   else {
     $user = new Users(new Database());
@@ -51,7 +48,6 @@ if ($_POST['module'] == 'setIp') {
   }
 }
 
-
 else if ($_POST['module'] == 'download') {
   $geoplugin = new geoPlugin();
   $geoplugin->locate();
@@ -66,7 +62,9 @@ else if ($_POST['module'] == 'download') {
   $userActions->setDownload(1);
   $userActions->updateDownload();
 }
-
+else if ($_POST['module'] == 'unityLoginData') {
+  echo "string";
+}
 
 
 
