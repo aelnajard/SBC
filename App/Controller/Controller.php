@@ -56,11 +56,11 @@ function getLastIdUser(){
 if ($_POST['module'] == 'setIp') {
    countUsersActionsByIpFromUA();
   if ($countIp > 0) {
-    createUserActionIpFromUsers(getIdUserFromUA())
+  //  createUserActionIpFromUsers(getIdUserFromUA())
   }
   else {
-    createUserFromU();
-    createUserActionIpFromUsers(getLastIdUser())
+  //  createUserFromU();
+  //  createUserActionIpFromUsers(getLastIdUser())
   }
 }
 
