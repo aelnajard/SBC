@@ -26,6 +26,8 @@ function countUsersActionsByIpFromUA(){//UA -> User Action
   $userActions = new UsersActions(new Database());
   $userActions->setIp(getIp());
   $countIp = $userActions->countUsersActionsByIp()["COUNT(*)"];
+
+  return $countIp;
 }
 function getIdUserFromUA(){//UA -> User Action
   $userActions = new UsersActions(new Database());
@@ -54,7 +56,7 @@ function getLastIdUser(){
 }
 
 if ($_POST['module'] == 'setIp') {
-   countUsersActionsByIpFromUA();
+  $countIp = countUsersActionsByIpFromUA();
   if ($countIp > 0) {
   //  createUserActionIpFromUsers(getIdUserFromUA())
   }
