@@ -17,6 +17,7 @@
       private $thingWouldLike;
       private $contacUs;
       private $download;
+      private $city;
 
       private $con;
 
@@ -28,6 +29,9 @@
       }
       function setIp($ip){
         $this->ip = $ip;
+      }
+      function setCity($city){
+        $this->city = $city;
       }
       function setIdUserAction($idUserAction){
         $this->idUserAction = $idUserAction;
@@ -63,7 +67,7 @@
 
       function createUserActionIp(){
         try{
-          $sql = "INSERT INTO `UserActions`( `idUser`,  `ip`) VALUES ('$this->idUser',  '$this->ip')";
+          $sql = "INSERT INTO `UserActions`( `idUser`,  `ip`,  `city`) VALUES ('$this->idUser',  '$this->ip',  '$this->ip',  '$this->city')";
           $this->con->conn()->exec($sql);
           $this->con->close();
             }

@@ -16,7 +16,6 @@ if ($_POST['module'] == 'setIp') {
  $geoplugin->locate();
  $geoplugin->ip;
 
-echo $geoplugin->city;
 
  $userActions = new UsersActions(new Database());
  $userActions->setIp($geoplugin->ip);
@@ -31,6 +30,7 @@ echo $geoplugin->city;
     $userActions = new UsersActions(new Database());
     $userActions->setIdUser($idUser);
     $userActions->setIp($geoplugin->ip);
+    $userActions->setCity($geoplugin->city);
     $userActions->createUserActionIp();
 
   }
@@ -46,6 +46,7 @@ echo $geoplugin->city;
     $userActions = new UsersActions(new Database());
     $userActions->setIdUser($idUser);
     $userActions->setIp($geoplugin->ip);
+    $userActions->setCity($geoplugin->city);
     $userActions->createUserActionIp();
 
   }
