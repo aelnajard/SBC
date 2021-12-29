@@ -73,7 +73,7 @@
 
     function  getIdUserAction(){
       try{
-        $sql = $this->con->conn()->query("SELECT `idUserAction` FROM `UserActions` WHERE `ip` = '$this->ip' ORDER BY `idUserActions`  LIMIT 1");
+        $sql = $this->con->conn()->query("SELECT `idUser` FROM `UserActions` WHERE `ip` = '$this->ip' ORDER BY `idUserActions`  LIMIT 1");
          $data = $sql->fetch(PDO::FETCH_OBJ);
          $this->con->close();
          return $data;
