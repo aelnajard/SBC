@@ -68,7 +68,7 @@
       function createUserActionIp(){
         echo $this->city."holalalala";
         try{
-          $sql = "INSERT INTO `UserActions`( `idUser`,  `ip`,  `city`) VALUES ('$this->idUser',  '$this->ip')";
+          $sql = "INSERT INTO `UserActions`( `idUser`,  `ip`) VALUES ('$this->idUser',  '$this->ip')";
           $this->con->conn()->exec($sql);
           $this->con->close();
             }
