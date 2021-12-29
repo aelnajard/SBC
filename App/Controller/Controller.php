@@ -20,6 +20,7 @@ if ($_POST['module'] == 'setIp') {
  $userActions->setIp($geoplugin->ip);
  $countIp = $userActions->countUsersActionsByIp()["COUNT(*)"];
 
+ echo $countIp;
 
   if ($countIp > 0) {
     echo "hola";
