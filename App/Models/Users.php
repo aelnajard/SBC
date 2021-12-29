@@ -29,7 +29,7 @@
         function lastIdUser(){
          try{
             $sql = $this->conn->conn()->query("SELECT `idUser` FROM `Users` ORDER BY `idUser`DESC LIMIT 1  ");
-            $data = $sql->fetch(PDO::FETCH_DEFAULT);
+            $data = $sql->fetch(PDO::FETCH_ASSOC);
             $this->conn->close();
             return $data;
             }
