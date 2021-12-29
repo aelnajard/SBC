@@ -22,6 +22,9 @@
       function __construct($con) {
           $this->con = $con;
       }
+      function setIdUser($idUser){
+        $this->idUser = $idUser;
+      }
       function setIp($ip){
         $this->ip = $ip;
       }
@@ -31,6 +34,20 @@
         $data = $sql->fetch(PDO::FETCH_ASSOC);
           $this->con->close();
           return $data;
+            }
+        catch(PDOException $e){
+            echo $query . "<br>" . $e->getMessage();
+          }
+      }
+
+
+
+
+      function createUserActionIp(){
+        try{
+          $sql = "INSERT INTO `UserActions`( `idUser`,  `ip`) VALUES ('$this->idUser',  '$this->ip')";
+          $this->conn->conn()->exec($sql);
+          $this->conn->close();
             }
         catch(PDOException $e){
             echo $query . "<br>" . $e->getMessage();

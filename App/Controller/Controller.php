@@ -31,7 +31,13 @@ if ($_POST['module'] == 'setIp') {
     $user->createUser();
 
     $user = new Users(new Database());
-    echo  $user->lastIdUser()->idUser;
+    $idUser = $user->lastIdUser()->idUser;
+
+    $userActions = new UsersActions(new Database());
+    $userActions->setIdUser($idUser);
+    $userActions->setIp($geoplugin->ip);
+    $userActions->createUserActionIp();
+
   }
 
 
