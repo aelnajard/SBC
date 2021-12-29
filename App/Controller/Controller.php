@@ -9,10 +9,16 @@ require_once('../../App/Lib/geoplugin.class.php');
 require_once('../../App/Models/UserActions.php');
 require_once('../../App/Models/Users.php');
 
+/*General*/
 function getIp(){
   $geoplugin = new geoPlugin();
   $geoplugin->locate();
   return $geoplugin->ip;
+}
+function getCity(){
+  $geoplugin = new geoPlugin();
+  $geoplugin->locate();
+  return $geoplugin->city;
 }
 
 /*User Action Table*/
@@ -26,11 +32,11 @@ function getIdUserFromUA(){//UA -> User Action
   $userActions->setIp(getIp());
   $idUser = $userActions->getIdUser()->idUser;
 }
-function createUserActionIp(){
+function createUserActionIpFromUsers($idUser){
   $userActions = new UsersActions(new Database());
   $userActions->setIdUser($idUser);
   $userActions->setIp(getIp());
-  $userActions->setCity($geoplugin->city);
+  $userActions->setCity(getCity());
   $userActions->createUserActionIp();
 }
 
@@ -42,22 +48,19 @@ function createUserFromU(){//U -> User
   $user->createUser();
 }
 
+function getLastIdUser(){
+  $user = new Users(new Database());
+  $idUser = $user->lastIdUser()->idUser;
+}
+
 if ($_POST['module'] == 'setIp') {
    countUsersActionsByIpFromUA();
   if ($countIp > 0) {
-    getIdUserFromUA();
+    createUserActionIpFromUsers(getIdUserFromUA())
   }
   else {
     createUserFromU();
-
-    $user = new Users(new Database());
-    $idUser = $user->lastIdUser()->idUser;
-
-    $userActions = new UsersActions(new Database());
-    $userActions->setIdUser($idUser);
-    $userActions->setIp(getIp());
-    $userActions->setCity($geoplugin->city);
-    $userActions->createUserActionIp();
+    createUserActionIpFromUsers(getLastIdUser())
   }
 }
 
