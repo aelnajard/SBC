@@ -26,7 +26,7 @@
             }
         }
 
-        function getLastId(){
+        function hola(){
           echo "hola";
       //   try{
         //    $sql = $this->conn->conn()->query("SELECT `idUser` FROM `Users` ORDER BY `idUser`DESC LIMIT 1  ");
