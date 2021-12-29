@@ -63,7 +63,7 @@ if ($_POST['module'] == 'setIp') {
   if ($countIp > 0) {
 
     // For  delete
-    getIdUserFromUA();
+  echo  getIdUserFromUA();
 
   //  createUserActionIpFromUsers(getIdUserFromUA())
   }
