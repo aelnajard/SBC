@@ -31,11 +31,8 @@ if ($_POST['module'] == 'setIp') {
     $user->createUser();
 
     $user = new Users(new Database());
-    $user->lastIdUser();
+  echo  $user->lastIdUser();
 
-
-
-  //  echo  $userActions->getLastId();
   }
 
 
