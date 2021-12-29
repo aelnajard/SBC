@@ -92,7 +92,7 @@
           $sql = "UPDATE
           `UserActions`
           SET `download` =  '$this->download'
-          WHERE `idUserAction` = '$this->idUserAction'
+          WHERE `idUserActions` = '$this->idUserAction'
           ";
           $this->con->conn()->exec($sql);
           $this->con->close();
