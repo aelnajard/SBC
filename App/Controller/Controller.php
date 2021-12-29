@@ -54,7 +54,17 @@ if ($_POST['module'] == 'setIp') {
 
 
 else if ($_POST['module'] == 'download') {
- echo "holatu";
+  $geoplugin = new geoPlugin();
+  $geoplugin->locate();
+  $geoplugin->ip;
+
+  $userActions = new UsersActions(new Database());
+  $userActions->setIp($geoplugin->ip);
+  $idUserAction = $userActions->getIdUserAction()->idUserAction;
+
+  echo $idUserAction;
+
+
 
 }
 

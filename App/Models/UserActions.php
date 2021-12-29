@@ -16,6 +16,7 @@
       private $improvements;
       private $thingWouldLike;
       private $contacUs;
+      private $download;
 
       private $con;
 
@@ -27,6 +28,9 @@
       }
       function setIp($ip){
         $this->ip = $ip;
+      }
+      function setDownload($download){
+        $this->download = $download;
       }
       function countUsersActionsByIp(){
        try{
@@ -65,6 +69,35 @@
             echo $query . "<br>" . $e->getMessage();
           }
       }
+
+
+    function  getIdUserAction(){
+      try{
+        $sql = $this->con->conn()->query("SELECT `idUserAction` FROM `UserActions` WHERE `ip` = '$this->ip' ORDER BY `idUserActions`  LIMIT 1");
+         $data = $sql->fetch(PDO::FETCH_OBJ);
+         $this->con->close();
+         return $data;
+         }
+       catch(PDOException $e){
+           echo $query . "<br>" . $e->getMessage();
+         }
+    }
+
+    /*  function updatePhone(){
+        try{
+          $sql = "UPDATE
+          `UserActions`
+          SET `download` =  '$this->download'
+
+          WHERE `idUser` = '$this->idUser'
+          ";
+          $this->con->conn()->exec($sql);
+          $this->con->close();
+            }
+        catch(PDOException $e){
+            echo $query . "<br>" . $e->getMessage();
+          }
+      }*/
 
 /*
       function setContactUs($contactUs){
