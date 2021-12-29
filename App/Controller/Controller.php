@@ -38,9 +38,9 @@ function getIdUserFromUA(){//UA -> User Action
 }
 
 function createUserActionIpFromUsers($idUser){
-  $userActions = new UsersActions(new Database());
+/*   $userActions = new UsersActions(new Database());
   $userActions->setIdUser($idUser);
-/*  $userActions->setIp(getIp());
+ $userActions->setIp(getIp());
   $userActions->setCity(getCity());
   $userActions->createUserActionIp();*/
 }
