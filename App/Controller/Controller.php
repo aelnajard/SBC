@@ -40,9 +40,9 @@ function getIdUserFromUA(){//UA -> User Action
 function createUserActionIpFromUsers($idUser){
   $userActions = new UsersActions(new Database());
   $userActions->setIdUser($idUser);
-  $userActions->setIp(getIp());
+/*  $userActions->setIp(getIp());
   $userActions->setCity(getCity());
-  $userActions->createUserActionIp();
+  $userActions->createUserActionIp();*/
 }
 
 /*User*/
@@ -62,10 +62,7 @@ if ($_POST['module'] == 'setIp') {
   $countIp = countUsersActionsByIpFromUA();
   if ($countIp > 0) {
 
-    // For  delete
-  echo  getIdUserFromUA();
-
-  //  createUserActionIpFromUsers(getIdUserFromUA())
+    createUserActionIpFromUsers(getIdUserFromUA())
   }
   else {
   //  createUserFromU();
