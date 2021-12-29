@@ -421,6 +421,7 @@ function getIp(){
 			module: "setIp"
 		},
 		success: function(data){
+			alert(data);
 	 }
 	}
  )

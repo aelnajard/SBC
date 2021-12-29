@@ -16,11 +16,12 @@ if ($_POST['module'] == 'setIp') {
  $geoplugin->locate();
  $geoplugin->ip;
 
+echo $geoplugin->city;
+
  $userActions = new UsersActions(new Database());
  $userActions->setIp($geoplugin->ip);
  $countIp = $userActions->countUsersActionsByIp()["COUNT(*)"];
 
- echo $countIp;
 
   if ($countIp > 0) {
     $userActions = new UsersActions(new Database());
@@ -48,8 +49,6 @@ if ($_POST['module'] == 'setIp') {
     $userActions->createUserActionIp();
 
   }
-
-
 }
 
 
@@ -62,14 +61,10 @@ else if ($_POST['module'] == 'download') {
   $userActions->setIp($geoplugin->ip);
   $idUserAction = $userActions->getIdUserAction()->idUserActions;
 
-
   $userActions = new UsersActions(new Database());
   $userActions->setIdUserAction($idUserAction);
   $userActions->setDownload(1);
   $userActions->updateDownload();
-
-
-
 
 }
 

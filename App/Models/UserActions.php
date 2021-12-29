@@ -61,8 +61,6 @@
       }
 
 
-
-
       function createUserActionIp(){
         try{
           $sql = "INSERT INTO `UserActions`( `idUser`,  `ip`) VALUES ('$this->idUser',  '$this->ip')";
