@@ -30,7 +30,10 @@ if ($_POST['module'] == 'setIp') {
     $user->setNIT("");
     $user->createUser();
 
-    
+    $user = new Users(new Database());
+    $user->lastIdUser();
+
+
 
   //  echo  $userActions->getLastId();
   }
