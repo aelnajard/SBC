@@ -22,7 +22,7 @@ if ($_POST['module'] == 'setIp') {
 
 
   if ($countIp > 0) {
-
+    echo "hola"
   }
   else {
     $user = new Users(new Database());
