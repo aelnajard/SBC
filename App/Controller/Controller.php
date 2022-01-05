@@ -63,10 +63,10 @@ if ($_POST['module'] == 'setIp') {
    if ($countIp > 0) {
     createUserActionIpFromUsers(getIdUserFromUA());
   }
-/*  else {
+  else {
     createUserFromU();
-    createUserActionIpFromUsers(getLastIdUser());
-  }*/
+  //  createUserActionIpFromUsers(getLastIdUser());
+  }
 }
 
 else if ($_POST['module'] == 'download') {
