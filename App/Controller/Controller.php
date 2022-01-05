@@ -65,7 +65,7 @@ if ($_POST['module'] == 'setIp') {
   }
   else {
     createUserFromU();
-  //  createUserActionIpFromUsers(getLastIdUser());
+    createUserActionIpFromUsers(getLastIdUser());
   }
 }
 
