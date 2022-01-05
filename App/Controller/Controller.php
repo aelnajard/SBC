@@ -60,10 +60,10 @@ function getLastIdUser(){
 
 if ($_POST['module'] == 'setIp') {
  $countIp = countUsersActionsByIpFromUA();
-/*   if ($countIp > 0) {
+   if ($countIp > 0) {
     createUserActionIpFromUsers(getIdUserFromUA());
   }
-  else {
+/*  else {
     createUserFromU();
     createUserActionIpFromUsers(getLastIdUser());
   }*/
