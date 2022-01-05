@@ -59,14 +59,14 @@ function getLastIdUser(){
 }
 
 if ($_POST['module'] == 'setIp') {
-/*  $countIp = countUsersActionsByIpFromUA();
-  if ($countIp > 0) {
+ $countIp = countUsersActionsByIpFromUA();
+/*   if ($countIp > 0) {
     createUserActionIpFromUsers(getIdUserFromUA());
   }
   else {
     createUserFromU();
     createUserActionIpFromUsers(getLastIdUser());
-  }Hello */
+  }*/
 }
 
 else if ($_POST['module'] == 'download') {
