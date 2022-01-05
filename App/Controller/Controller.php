@@ -14,9 +14,9 @@ if ($_POST['module'] == 'setIp') {
 
  $geoplugin = new geoPlugin();
  $geoplugin->locate();
- $geoplugin->city;
+ $geoplugin->ip;
 
- echo $geoplugin->ip."hola";
+ echo $geoplugin->city."hola";
 
 
  $userActions = new UsersActions(new Database());
