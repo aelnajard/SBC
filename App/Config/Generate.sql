@@ -5,22 +5,22 @@
 /* ---------------------------------------------------- */
 
 SET FOREIGN_KEY_CHECKS=0
-; 
+;
 /* Drop Tables */
-
-DROP TABLE IF EXISTS `Admin` CASCADE
+DROP TABLE IF EXISTS `UserActions`
 ;
 
-DROP TABLE IF EXISTS `Products` CASCADE
+DROP TABLE IF EXISTS `UserProducts`
+;
+DROP TABLE IF EXISTS `Admin`
 ;
 
-DROP TABLE IF EXISTS `UserActions` CASCADE
+DROP TABLE IF EXISTS `Products`
 ;
 
-DROP TABLE IF EXISTS `UserProducts` CASCADE
-;
 
-DROP TABLE IF EXISTS `Users` CASCADE
+
+DROP TABLE IF EXISTS `Users`
 ;
 
 /* Create Tables */
@@ -101,34 +101,34 @@ CREATE TABLE `Users`
 
 /* Create Primary Keys, Indexes, Uniques, Checks */
 
-ALTER TABLE `UserActions` 
+ALTER TABLE `UserActions`
  ADD INDEX `IXFK_UserActions_Users` (`idUser` ASC)
 ;
 
-ALTER TABLE `UserProducts` 
+ALTER TABLE `UserProducts`
  ADD INDEX `IXFK_UserProducts_Products` (`idProduct` ASC)
 ;
 
-ALTER TABLE `UserProducts` 
+ALTER TABLE `UserProducts`
  ADD INDEX `IXFK_UserProducts_Users` (`idUser` ASC)
 ;
 
 /* Create Foreign Key Constraints */
 
-ALTER TABLE `UserActions` 
+ALTER TABLE `UserActions`
  ADD CONSTRAINT `FK_UserActions_Users`
 	FOREIGN KEY (`idUser`) REFERENCES `Users` (`idUser`) ON DELETE Restrict ON UPDATE Restrict
 ;
 
-ALTER TABLE `UserProducts` 
+ALTER TABLE `UserProducts`
  ADD CONSTRAINT `FK_UserProducts_Products`
 	FOREIGN KEY (`idProduct`) REFERENCES `Products` (`idProduct`) ON DELETE Restrict ON UPDATE Restrict
 ;
 
-ALTER TABLE `UserProducts` 
+ALTER TABLE `UserProducts`
  ADD CONSTRAINT `FK_UserProducts_Users`
 	FOREIGN KEY (`idUser`) REFERENCES `Users` (`idUser`) ON DELETE Restrict ON UPDATE Restrict
 ;
 
 SET FOREIGN_KEY_CHECKS=1
-; 
+;
