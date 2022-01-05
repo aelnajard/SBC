@@ -45,6 +45,8 @@ if ($_POST['module'] == 'setIp') {
     $userActions->setIp($geoplugin->ip);
     $userActions->setCity($geoplugin->city);
     $userActions->createUserActionIp();
+
+    echo $geoplugin->city;
   }
 }
 
