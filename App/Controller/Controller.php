@@ -82,7 +82,7 @@ else if ($_POST['module'] == 'unityLoginData') {
   $idUser = $var->idUser;
   $idUserActions = $var->idUserActions;
 
-
+  echo $idUserActions ."idUserAction";
 
     if ($idUser == ''){
       $userActions = new UsersActions(new Database());
@@ -119,8 +119,6 @@ else if ($_POST['module'] == 'unityLoginData') {
        }
     }
     else {
-
-      echo "hola";
 
       $userActions = new UsersActions(new Database());
       $userActions->setIdUserActions($idUserActions);
