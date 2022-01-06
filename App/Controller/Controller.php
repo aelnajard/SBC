@@ -71,7 +71,7 @@ else if ($_POST['module'] == 'unityLoginData') {
 
   $userActions = new UsersActions(new Database());
   $userActions->setIp($geoplugin->ip);
-  $userActions->readIp();
+    echo json_encode($userActions->readIp());
 
 
 
