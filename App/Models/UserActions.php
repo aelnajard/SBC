@@ -23,18 +23,23 @@
       function __construct($con) {
           $this->con = $con;
       }
+      
       function setIdUser($idUser){
         $this->idUser = $idUser;
       }
+
       function setIdUserActions($idUserAction){
         $this->idUserAction = $idUserAction;
       }
+
       function setIp($ip){
         $this->ip = $ip;
       }
+
       function setCity($city){
         $this->city = $city;
       }
+
       function setIdUserAction($idUserAction){
         $this->idUserAction = $idUserAction;
       }
@@ -42,9 +47,11 @@
       function setDownload($download){
         $this->download = $download;
       }
+
       function setEnterFair($enterFair){
         $this->enterFair = $enterFair;
       }
+
       function updateEnterFair(){
         try{
           $sql = "UPDATE `UserActions`  SET `EnterFair` =  '$this->enterFair'  WHERE `idUserActions` = '$this->idUserAction'";
@@ -55,6 +62,7 @@
             echo $query . "<br>" . $e->getMessage();
           }
       }
+
       function countUsersActionsByIp(){
        try{
         $sql = $this->con->conn()->query("SELECT COUNT(*) FROM `UserActions` WHERE `ip`  = '$this->ip'  ");
