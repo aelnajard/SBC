@@ -26,6 +26,9 @@
       function setIdUser($idUser){
         $this->idUser = $idUser;
       }
+      function setIdUserActions($idUserAction){
+        $this->idUserAction = $idUserAction;
+      }
       function setIp($ip){
         $this->ip = $ip;
       }
@@ -44,14 +47,14 @@
       }
       function updateEnterFair(){
         echo "entramos update";
-        try{
+      /*  try{
           $sql = "UPDATE `UserActions`  SET `EnterFair` =  '$this->enterFair'  WHERE `idUserActions` = '$this->idUserAction'";
           $this->con->conn()->exec($sql);
           $this->con->close();
             }
         catch(PDOException $e){
             echo $query . "<br>" . $e->getMessage();
-          }
+          }*/
       }
       function countUsersActionsByIp(){
        try{
