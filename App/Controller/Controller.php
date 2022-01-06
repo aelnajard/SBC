@@ -71,7 +71,7 @@ else if ($_POST['module'] == 'unityLoginData') {
 
   $userActions = new UsersActions(new Database());
   $userActions->setIp($geoplugin->ip);
-    echo $userActions->readIp()->idUser;
+  //  echo $userActions->readIp()->idUser;
 
     if ($userActions->readIp()->idUser == "") {
       echo "esta vacio";
