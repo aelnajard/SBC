@@ -3,12 +3,11 @@
       private $idUser;
       private $idUserAction;
       private $ip;
-
+      private $enterFair;
 
       private $sessionNumber;
       private $timeLogin;
       private $timeExit;
-      private $enterFair;
       private $enterCheckOut;
       private $didTheOrder;
       private $likes;
@@ -39,6 +38,9 @@
 
       function setDownload($download){
         $this->download = $download;
+      }
+      function setEnterFair($enterFair){
+        $this->enterFair = $enterFair;
       }
       function countUsersActionsByIp(){
        try{
@@ -78,7 +80,7 @@
 
       function createUserActionIp(){
         try{
-          $sql = "INSERT INTO `UserActions`( `idUser`,  `ip`,`city`) VALUES ('$this->idUser',  '$this->ip','$this->city')";
+          $sql = "INSERT INTO `UserActions`( `idUser`,  `ip`, `EnterFair`, `city`) VALUES ('$this->idUser',  '$this->ip', '$this->enterFair','$this->city')";
           $this->con->conn()->exec($sql);
           $this->con->close();
             }
@@ -136,9 +138,7 @@
         function setSessionNumber($idSessionNumber){
           $this->idSessionNumber=$idSessionNumber;
         }
-        function setEnterFair($enterFair){
-          $this->enterFair = $enterFair;
-        }
+
         function setSessionId($sessionId){
           $this->sessionId = $sessionId;
         }

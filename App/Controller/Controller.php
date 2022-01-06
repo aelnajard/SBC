@@ -29,6 +29,7 @@ if ($_POST['module'] == 'setIp') {
     $userActions = new UsersActions(new Database());
     $userActions->setIdUser($idUser);
     $userActions->setIp($geoplugin->ip);
+    $userActions->setEnterFair('0');
     $userActions->setCity($geoplugin->city);
     $userActions->createUserActionIp();
   }
@@ -44,6 +45,7 @@ if ($_POST['module'] == 'setIp') {
     $userActions = new UsersActions(new Database());
     $userActions->setIdUser($idUser);
     $userActions->setIp($geoplugin->ip);
+    $userActions->setEnterFair('0');
     $userActions->setCity($geoplugin->city);
     $userActions->createUserActionIp();
   }
@@ -88,6 +90,7 @@ else if ($_POST['module'] == 'unityLoginData') {
          $userActions = new UsersActions(new Database());
          $userActions->setIdUser($idUser);
          $userActions->setIp($geoplugin->ip);
+         $userActions->setEnterFair('1');
          $userActions->setCity($geoplugin->city);
          $userActions->createUserActionIp();
        }
@@ -103,12 +106,13 @@ else if ($_POST['module'] == 'unityLoginData') {
          $userActions = new UsersActions(new Database());
          $userActions->setIdUser($idUser);
          $userActions->setIp($geoplugin->ip);
+         $userActions->setEnterFair('1');
          $userActions->setCity($geoplugin->city);
          $userActions->createUserActionIp();
        }
     }
     else {
-      
+
     }
 }
 
