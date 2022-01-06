@@ -73,7 +73,12 @@ else if ($_POST['module'] == 'unityLoginData') {
   $userActions->setIp($geoplugin->ip);
     echo $userActions->readIp()->idUser;
 
-
+    if ($userActions->readIp()->idUser == "") {
+      echo "esta vacio";
+    }
+    else {
+      echo "No esta vacio";
+    }
 
 }
 
