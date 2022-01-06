@@ -82,8 +82,6 @@ else if ($_POST['module'] == 'unityLoginData') {
   $idUser = $var->idUser;
   $idUserActions = $var->idUserActions;
 
-  echo $idUserActions;
-
     if ($idUser == ''){
       $userActions = new UsersActions(new Database());
       $userActions->setIp($geoplugin->ip);
@@ -121,10 +119,9 @@ else if ($_POST['module'] == 'unityLoginData') {
     else {
 
       $userActions = new UsersActions(new Database());
-      $userActions->setIdUser($idUser);
+      $userActions->setIdUserActions($idUserActions);
       $userActions->setEnterFair('1');
-
-
+      $userActions->updateEnterFair();
     }
 }
 

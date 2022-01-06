@@ -40,7 +40,18 @@
         $this->download = $download;
       }
       function setEnterFair($enterFair){
-        $this->enterFair = $enterFair;
+        try{
+          $sql = "UPDATE
+          `UserActions`
+          SET `EnterFair` =  '$this->enterFair'
+          WHERE `idUserActions` = '$this->idUserAction'
+          ";
+          $this->con->conn()->exec($sql);
+          $this->con->close();
+            }
+        catch(PDOException $e){
+            echo $query . "<br>" . $e->getMessage();
+          }
       }
       function countUsersActionsByIp(){
        try{
@@ -75,6 +86,10 @@
          catch(PDOException $e){
              echo $query . "<br>" . $e->getMessage();
            }
+      }
+
+      function updateEnterFair(){
+
       }
 
 
