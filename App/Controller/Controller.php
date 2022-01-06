@@ -65,7 +65,14 @@ else if ($_POST['module'] == 'download') {
   $userActions->updateDownload();
 }
 else if ($_POST['module'] == 'unityLoginData') {
-  echo $_POST['NIT'].$_POST['email'];
+  $geoplugin = new geoPlugin();
+  $geoplugin->locate();
+  $geoplugin->ip;
+
+
+
+
+  echo $geoplugin->ip;
 }
 
 
