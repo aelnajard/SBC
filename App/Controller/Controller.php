@@ -75,11 +75,40 @@ else if ($_POST['module'] == 'unityLoginData') {
 
     echo $var;
 
-    if ($var == '') {
-      echo "esta vacio";
+    if ($var == ''){
+      $userActions = new UsersActions(new Database());
+      $userActions->setIp($geoplugin->ip);
+      $countIp = $userActions->countUsersActionsByIp()["COUNT(*)"];
+
+       if ($countIp > 0) {
+         $userActions = new UsersActions(new Database());
+         $userActions->setIp($geoplugin->ip);
+         $idUser = $userActions->getIdUser()->idUser;
+
+         $userActions = new UsersActions(new Database());
+         $userActions->setIdUser($idUser);
+         $userActions->setIp($geoplugin->ip);
+         $userActions->setCity($geoplugin->city);
+         $userActions->createUserActionIp();
+       }
+       else {
+         $user = new Users(new Database());
+         $user->setEmail("");
+         $user->setNIT("");
+         $user->createUser();
+
+         $user = new Users(new Database());
+         $idUser = $user->lastIdUser()->idUser;
+
+         $userActions = new UsersActions(new Database());
+         $userActions->setIdUser($idUser);
+         $userActions->setIp($geoplugin->ip);
+         $userActions->setCity($geoplugin->city);
+         $userActions->createUserActionIp();
+       }
     }
     else {
-      echo "No esta vacio";
+      
     }
 }
 
