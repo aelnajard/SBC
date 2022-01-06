@@ -121,7 +121,7 @@ else if ($_POST['module'] == 'unityLoginData') {
       $userActions = new UsersActions(new Database());
       $userActions->setIdUserActions($idUserActions);
       $userActions->setEnterFair('1');
-    //  $userActions->updateEnterFair();
+      $userActions->updateEnterFair();
     }
 }
 

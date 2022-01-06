@@ -40,6 +40,9 @@
         $this->download = $download;
       }
       function setEnterFair($enterFair){
+        $this->enterFair = $enterFair;
+      }
+      function updateEnterFair(){
         try{
           $sql = "UPDATE `UserActions`  SET `EnterFair` =  '$this->enterFair'  WHERE `idUserActions` = '$this->idUserAction'";
           $this->con->conn()->exec($sql);
@@ -84,9 +87,7 @@
            }
       }
 
-      function updateEnterFair(){
 
-      }
 
 
       function createUserActionIp(){
