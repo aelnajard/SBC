@@ -43,7 +43,7 @@
         $this->enterFair = $enterFair;
       }
       function updateEnterFair(){
-        echo "update";
+        echo "entramos update";
         try{
           $sql = "UPDATE `UserActions`  SET `EnterFair` =  '$this->enterFair'  WHERE `idUserActions` = '$this->idUserAction'";
           $this->con->conn()->exec($sql);
