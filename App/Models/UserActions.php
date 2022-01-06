@@ -67,7 +67,7 @@
       }
       function readIp(){
         try{
-          $sql = $this->con->conn()->query("SELECT `idUser` FROM `UserActions` WHERE `ip` =  '$this->ip' LIMIT 1");
+          $sql = $this->con->conn()->query("SELECT `idUser`, `idUserActions` FROM `UserActions` WHERE `ip` =  '$this->ip' ORDER BY `idUserActions` DESC LIMIT 1");
            $data = $sql->fetch(PDO::FETCH_OBJ);
            $this->con->close();
            return $data;
