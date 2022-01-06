@@ -63,6 +63,9 @@
              echo $query . "<br>" . $e->getMessage();
            }
       }
+      function readIp(){
+        echo "string";
+      }
 
 
       function createUserActionIp(){

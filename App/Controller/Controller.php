@@ -69,10 +69,12 @@ else if ($_POST['module'] == 'unityLoginData') {
   $geoplugin->locate();
   $geoplugin->ip;
 
+  $userActions = new UsersActions(new Database());
+  $userActions->setIp($geoplugin->ip);
+  $userActions->readIp();
 
 
 
-  echo $geoplugin->ip;
 }
 
 
