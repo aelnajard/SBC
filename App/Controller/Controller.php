@@ -65,7 +65,7 @@ else if ($_POST['module'] == 'download') {
   $userActions->updateDownload();
 }
 else if ($_POST['module'] == 'unityLoginData') {
-  echo "string";
+  echo $_POST['NIT'].$_POST['email'];
 }
 
 
