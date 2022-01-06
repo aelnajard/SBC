@@ -122,6 +122,8 @@ else if ($_POST['module'] == 'unityLoginData') {
       $userActions->setIdUserActions($idUserActions);
       $userActions->setEnterFair('1');
       $userActions->updateEnterFair();
+
+      echo "string";
     }
 }
 
