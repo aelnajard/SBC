@@ -75,7 +75,7 @@ else if ($_POST['module'] == 'unityLoginData') {
 
     echo $var;
 
-    if ($userActions->readIp()->idUser == '') {
+    if ($var == '') {
       echo "esta vacio";
     }
     else {
