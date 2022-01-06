@@ -118,7 +118,6 @@ else if ($_POST['module'] == 'unityLoginData') {
        }
     }
     else {
-
       $userActions = new UsersActions(new Database());
       $userActions->setIdUserActions($idUserActions);
       $userActions->setEnterFair('1');
@@ -131,7 +130,6 @@ else if ($_POST['module'] == 'uploadTimeEnterFair') {
   $geoplugin = new geoPlugin();
   $geoplugin->locate();
   $geoplugin->ip;
-
 
   echo $geoplugin->ip;
 
