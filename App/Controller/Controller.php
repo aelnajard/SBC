@@ -128,14 +128,7 @@ else if ($_POST['module'] == 'unityLoginData') {
 
 else if ($_POST['module'] == 'uploadTimeEnterFair') {
 
-
-
   echo "hola como estas";
-  $geoplugin = new geoPlugin();
-  $geoplugin->locate();
-  $geoplugin->ip;
-
-  echo $geoplugin->ip;
 
 
 }
