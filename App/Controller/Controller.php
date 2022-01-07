@@ -124,7 +124,6 @@ else if ($_POST['module'] == 'unityLoginData') {
       $userActions->updateEnterFair();
       }
 
-      echo "hola";
 }
 
 else if ($_POST['module'] == 'uploadTimeEnterFair') {
