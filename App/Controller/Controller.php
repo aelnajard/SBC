@@ -122,16 +122,20 @@ else if ($_POST['module'] == 'unityLoginData') {
       $userActions->setIdUserActions($idUserActions);
       $userActions->setEnterFair('1');
       $userActions->updateEnterFair();
-
-    }
+      }
 }
 
 else if ($_POST['module'] == 'uploadTimeEnterFair') {
+
+  echo "hola como estas";
   $geoplugin = new geoPlugin();
   $geoplugin->locate();
   $geoplugin->ip;
 
   echo $geoplugin->ip;
+
+
+
 
 }
 
