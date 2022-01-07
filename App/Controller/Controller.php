@@ -123,7 +123,7 @@ else if ($_POST['module'] == 'unityLoginData') {
       $userActions->setEnterFair('1');
       $userActions->updateEnterFair();
       }
-
+      echo "AELNA                     Y                               JULI";
 }
 
 else if ($_POST['module'] == 'uploadTimeEnterFair') {
