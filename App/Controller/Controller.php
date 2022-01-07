@@ -123,12 +123,15 @@ else if ($_POST['module'] == 'unityLoginData') {
       $userActions->setEnterFair('1');
       $userActions->updateEnterFair();
       }
+      echo "HOLA           KSDJFDLKSADJFDASLDKFJAL;";
+
 
 }
 
 
 else if ($_POST['module'] == 'unityLoginData1') {
-  echo "dDSDKFJLDSKDFJLSDDKJFDSLKDDJFLSAKJLSDKJFD              KSDJFDLKSADJFDASLDKFJAL;";
+
+  
       }
 
 }
