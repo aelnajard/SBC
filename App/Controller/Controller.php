@@ -129,11 +129,6 @@ else if ($_POST['module'] == 'unityLoginData') {
 }
 
 
-else if ($_POST['module'] == 'unityLoginData1') {
-
-  
-      }
-
 }
 
 //
