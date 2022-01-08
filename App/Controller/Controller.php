@@ -123,7 +123,16 @@ else if ($_POST['module'] == 'unityLoginData') {
       $userActions->setEnterFair('1');
       $userActions->updateEnterFair();
       }
-      echo "AELNA                     Y                               JULI";
+      
+      $timezone  = -5;
+      $timeLogin =  gmdate("20y-m-d h:i:s", time() + 3600*($timezone));
+
+      $userActions = new UsersActions(new Database());
+      $userActions->setIdUserActions($idUserActions);
+      $userActions->setTimeLogin($timeLogin);
+      $userActions->updateTimeLogin();
+
+
 }
 
 else if ($_POST['module'] == 'uploadTimeEnterFair') {
@@ -134,8 +143,6 @@ else if ($_POST['module'] == 'uploadTimeEnterFair') {
   $geoplugin->ip;
 
   echo $geoplugin->ip;
-
-
 
 
 }

@@ -4,9 +4,10 @@
       private $idUserAction;
       private $ip;
       private $enterFair;
+      private $timeLogin;
+
 
       private $sessionNumber;
-      private $timeLogin;
       private $timeExit;
       private $enterCheckOut;
       private $didTheOrder;
@@ -23,7 +24,7 @@
       function __construct($con) {
           $this->con = $con;
       }
-      
+
       function setIdUser($idUser){
         $this->idUser = $idUser;
       }
@@ -51,10 +52,24 @@
       function setEnterFair($enterFair){
         $this->enterFair = $enterFair;
       }
+      function setTimeLogin($timeLogin){
+        $this->timeLogin = $timeLogin;
+      }
 
       function updateEnterFair(){
         try{
           $sql = "UPDATE `UserActions`  SET `EnterFair` =  '$this->enterFair'  WHERE `idUserActions` = '$this->idUserAction'";
+          $this->con->conn()->exec($sql);
+          $this->con->close();
+            }
+        catch(PDOException $e){
+            echo $query . "<br>" . $e->getMessage();
+          }
+      }
+
+      function updateTimeLogin(){
+        try{
+          $sql = "UPDATE `UserActions`  SET `timeLogin` =  '$this->timeLogin'  WHERE `idUserActions` = '$this->idUserAction'";
           $this->con->conn()->exec($sql);
           $this->con->close();
             }
