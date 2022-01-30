@@ -18,7 +18,7 @@
 
         try{
 
-          $sql = $this->conn->conn()->query("SELECT `idAvatars` FROM  `Avatars` WHERE gender = 'male' AND name = '1'  ");
+          $sql = $this->conn->conn()->query("SELECT `idAvatars` FROM  `Avatars` WHERE gender = '$this->avatar' AND name = '1'  ");
             $data = $sql->fetchAll(PDO::FETCH_OBJ);
             $this->conn->close();
             return $data;
