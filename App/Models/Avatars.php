@@ -19,7 +19,7 @@
         try{
 
           $sql = $this->con->conn()->query("SELECT `idAvatars` FROM  `Avatars` WHERE gender = 'male' AND name = '1' ORDER BY `idAvatars`DESC LIMIT 1 ");
-            $data = $sql->fetchAll(PDO::FETCH_OBJ);
+            $data = $sql->fetch(PDO::FETCH_OBJ);
             $this->con->close();
             return $data;
               }
