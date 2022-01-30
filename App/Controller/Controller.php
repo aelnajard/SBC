@@ -143,7 +143,6 @@ else if ($_POST['module'] == 'getAvatar') {
 
   $idUser = $avatar->getAvatar()->idAvatars;
 
-  echo "hola";
 
 
 //  echo json_encode($avatar->getAvatar()."HOLA");
