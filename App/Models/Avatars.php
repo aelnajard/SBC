@@ -1,6 +1,6 @@
 <?php
     class Avatars {
-      private $idAvayar;
+      private $idAvatar;
       private $avatar; // gender
       private $available;
       private $conn;

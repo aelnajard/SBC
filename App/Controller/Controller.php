@@ -139,10 +139,8 @@ else if ($_POST['module'] == 'unityLoginData') {
 else if ($_POST['module'] == 'getAvatar') {
   $avatar = new Avatars(new Database());
 
-  $avatar->setAvatar($_POST['avatar']);
-
-
-  echo $avatar->getAvatar()->idAvatars;
+  $avatar->setAvatar($_POST['avatar'])->idAvatar;
+  echo $avatar->getAvatar;
 
 }
 
