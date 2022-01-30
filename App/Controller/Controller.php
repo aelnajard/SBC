@@ -145,7 +145,7 @@ else if ($_POST['module'] == 'getAvatar') {
 
 
 
-  echo json_encode($avatar->getAvatar()."HOLA");
+  echo $avatar->getAvatar()->idAvatars."jsdhfdlasjdd";
 }
 
 
