@@ -140,9 +140,12 @@ else if ($_POST['module'] == 'getAvatar') {
   $avatar = new Avatars(new Database());
 
   $avatar->setAvatar($_POST['avatar']);
+
+  $idUser = $avatar->getAvatar()->idAvatars;
+
   echo "hola";
 
-//  $idUser = $avatar->getAvatar()->idAvatars;
+
 //  echo json_encode($avatar->getAvatar()."HOLA");
 }
 
