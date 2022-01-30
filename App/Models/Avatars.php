@@ -17,10 +17,9 @@
 
 
         try{
-          echo "hola2";
 
-          $sql = $this->con->conn()->query("SELECT `idUserActions` FROM  `Avatars` WHERE gender = '$this->avatar' AND name = '1' ");
-            $data = $sql->fetch(PDO::FETCH_ASSOC);
+          $sql = $this->con->conn()->query("SELECT `idAvatars` FROM  `Avatars` WHERE gender = '$this->avatar' AND name = '1' ");
+            $data = $sql->fetchAll(PDO::FETCH_ASSOC);
             $this->con->close();
             return $data;
               }
