@@ -113,9 +113,6 @@
            }
       }
 
-
-
-
       function createUserActionIp(){
         try{
           $sql = "INSERT INTO `UserActions`( `idUser`,  `ip`, `EnterFair`, `city`) VALUES ('$this->idUser',  '$this->ip', '$this->enterFair','$this->city')";
@@ -126,7 +123,6 @@
             echo $query . "<br>" . $e->getMessage();
           }
       }
-
 
     function  getIdUserAction(){
       try{

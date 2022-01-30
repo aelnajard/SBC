@@ -123,7 +123,7 @@ else if ($_POST['module'] == 'unityLoginData') {
       $userActions->setEnterFair('1');
       $userActions->updateEnterFair();
       }
-      
+
       $timezone  = -5;
       $timeLogin =  gmdate("20y-m-d h:i:s", time() + 3600*($timezone));
 
@@ -135,17 +135,12 @@ else if ($_POST['module'] == 'unityLoginData') {
 
 }
 
-else if ($_POST['module'] == 'uploadTimeEnterFair') {
+else if ($_POST['module'] == 'getAvatar') {
 
-  echo "hola como estas";
-  $geoplugin = new geoPlugin();
-  $geoplugin->locate();
-  $geoplugin->ip;
-
-  echo $geoplugin->ip;
-
-
+  echo $_POST['avatar'];
 }
+
+
 
 //
 
