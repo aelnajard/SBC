@@ -17,10 +17,10 @@
 
 
         try{
-          echo "string";
-          $sql = $this->con->conn()->query("SELECT `idAvatars` FROM  `Avatars` WHERE gender = 'male' AND name = '1' ORDER BY `idAvatars`DESC LIMIT 1 ");
+
+          $sql = $this->conn->conn()->query("SELECT `idAvatars` FROM  `Avatars` WHERE gender = 'male' AND name = '1' ORDER BY `idAvatars`DESC LIMIT 1 ");
             $data = $sql->fetch(PDO::FETCH_OBJ);
-            $this->con->close();
+            $this->conn->close();
             return $data;
               }
           catch(PDOException $e){
