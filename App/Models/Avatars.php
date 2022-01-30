@@ -11,17 +11,34 @@
         function setAvatar($avatar){
           $this->avatar = $avatar;
         }
-
+        function setIdAvatar($idAvatar){
+          $this->idAvatar = $idAvatar;
+        }
 
         function getAvatar(){
-
-
         try{
 
           $sql = $this->conn->conn()->query("SELECT `idAvatars` FROM  `Avatars` WHERE gender = '$this->avatar' AND name = '1' GROUP BY `idAvatars` DESC LIMIT 1  ");
             $data = $sql->fetchAll(PDO::FETCH_OBJ);
             $this->conn->close();
             return $data;
+              }
+          catch(PDOException $e){
+              echo $query . "<br>" . $e->getMessage();
+            }
+        }
+
+
+        function updateAvatar(){
+          try{
+            $sql = "UPDATE
+            `Avatars`
+            SET `name` =  '0'
+
+            WHERE `idAvatars` = '$this->idAvatar'
+            ";
+            $this->conn->conn()->exec($sql);
+            $this->conn->close();
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
@@ -62,8 +79,8 @@
                     '$this->NIT',
                     '$this->email'
                   )";
-            $this->con->conn()->exec($sql);
-            $this->con->close();
+            $this->conn->conn()->exec($sql);
+            $this->conn->close();
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
@@ -71,9 +88,9 @@
         }
         function readUserLastId(){//"LAST_INSERT_ID()"
           try{
-           $sql = $this->con->conn()->query("SELECT `idUser` FROM `Users` ORDER BY `idUser` DESC LIMIT 1");
+           $sql = $this->conn->conn()->query("SELECT `idUser` FROM `Users` ORDER BY `idUser` DESC LIMIT 1");
              $data = $sql->fetch(PDO::FETCH_ASSOC);
-             $this->con->close();
+             $this->conn->close();
              return $data;
                }
            catch(PDOException $e){
@@ -84,10 +101,10 @@
 
         function readUserExist(){
          try{
-          $sql = $this->con->conn()->query("SELECT COUNT(*)  FROM `Users` WHERE email = '$this->email'
+          $sql = $this->conn->conn()->query("SELECT COUNT(*)  FROM `Users` WHERE email = '$this->email'
           AND NIT = '$this->NIT'");
             $data = $sql->fetch(PDO::FETCH_ASSOC);
-            $this->con->close();
+            $this->conn->close();
             return $data;
               }
           catch(PDOException $e){
@@ -99,10 +116,10 @@
 
         function readIdUser(){
           try{
-            $sql = $this->con->conn()->query("SELECT *  FROM `Users` WHERE email = '$this->email'
+            $sql = $this->conn->conn()->query("SELECT *  FROM `Users` WHERE email = '$this->email'
             AND NIT = '$this->NIT'");
             $data = $sql->fetch(PDO::FETCH_OBJ);
-            $this->con->close();
+            $this->conn->close();
             return $data;
               }
           catch(PDOException $e){
@@ -123,8 +140,8 @@
 
             WHERE `idUser` = '$this->idUser'
             ";
-            $this->con->conn()->exec($sql);
-            $this->con->close();
+            $this->conn->conn()->exec($sql);
+            $this->conn->close();
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
@@ -153,9 +170,9 @@
 
         function readEmail(){
           try{
-          $sql = $this->con->conn()->query("SELECT COUNT(*)  FROM `Users` WHERE email = '$this->email'");
+          $sql = $this->conn->conn()->query("SELECT COUNT(*)  FROM `Users` WHERE email = '$this->email'");
             $data = $sql->fetch(PDO::FETCH_ASSOC);
-            $this->con->close();
+            $this->conn->close();
             return $data;
               }
           catch(PDOException $e){
