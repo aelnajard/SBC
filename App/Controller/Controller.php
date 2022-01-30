@@ -141,11 +141,10 @@ else if ($_POST['module'] == 'getAvatar') {
 
   $avatar->setAvatar($_POST['avatar']);
 
-//  $idUser = $avatar->getAvatar()->idAvatars;
 
 
 
-  echo $avatar->getAvatar()->idAvatars."jsdhfdlasjdd";
+ $avatar->getAvatar();
 }
 
 
