@@ -8,6 +8,7 @@ require_once('../../App/Config/database.php');
 require_once('../../App/Lib/geoplugin.class.php');
 require_once('../../App/Models/UserActions.php');
 require_once('../../App/Models/Users.php');
+require_once('../../App/Models/Avatars.php');
 
 
 if ($_POST['module'] == 'setIp') {
