@@ -140,9 +140,9 @@ else if ($_POST['module'] == 'getAvatar') {
   $avatar = new Avatars(new Database());
 
   $avatar->setAvatar($_POST['avatar']);
+  $idAvatar = ($avatar->getAvatar()[0]->idAvatars);
 
-
-  echo ($avatar->getAvatar()[0]->idAvatars);
+  echo $idAvatar;
 
 }
 
