@@ -145,8 +145,15 @@ else if ($_POST['module'] == 'getAvatar') {
   $avatar->setIdAvatar($idAvatar);
   $avatar->updateAvatar();
 
-  echo $idAvatar;
 
+  session_start();
+  $_SESSION["idAvatar"]=$idAvatar;;
+  echo $idAvatar;
+}
+
+else if ($_POST['module'] == 'setAvatar') {
+  session_start();
+  echo $_SESSION["idAvatar"];
 }
 
 
