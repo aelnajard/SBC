@@ -1,11 +1,8 @@
 <?php
-//session_start();
-
 header("Access-Control-Allow-Credentials: true");
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
 header('Access-Control-Allow-Headers: Accept, X-Access-Token, X-Application-Name, X-Request-Sent-Time');
-
 
 require_once('../../App/Config/database.php');
 require_once('../../App/Lib/geoplugin.class.php');
@@ -149,13 +146,15 @@ else if ($_POST['module'] == 'getAvatar') {
   $avatar->updateAvatar();
 
 
-  //$_SESSION["idAvatar"]=$idAvatar;;
+
   echo $idAvatar;
+
 }
 
 else if ($_POST['module'] == 'setAvatar') {
-  echo "STRING STRING SSTRING";
-  //echo $_SESSION["idAvatar"]."JULI POR FAVOR QUE NOS FUNCIONE";
+
+  echo     " HOLA  HOLA  HOLA  HOLA";
+
 }
 
 
