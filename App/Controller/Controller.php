@@ -145,8 +145,6 @@ else if ($_POST['module'] == 'getAvatar') {
   $avatar->setIdAvatar($idAvatar);
   $avatar->updateAvatar();
 
-
-
   echo $idAvatar;
 
 }
