@@ -152,6 +152,7 @@ else if ($_POST['module'] == 'getAvatar') {
 }
 
 else if ($_POST['module'] == 'setAvatar') {
+  echo "STRING STRING SSTRING";
   session_start();
   echo $_SESSION["idAvatar"]."JULI POR FAVOR QUE NOS FUNCIONE";
 }
