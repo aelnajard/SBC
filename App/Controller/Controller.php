@@ -151,7 +151,7 @@ else if ($_POST['module'] == 'getAvatar') {
 
 else if ($_POST['module'] == 'setAvatar') {
 
-  echo     " HOLA  HOLA  HOLA  HOLA";
+  echo     " HOLA  HOLA  HOLA  HOLA TU TU TU";
 
 }
 
