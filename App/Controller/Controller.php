@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 
 header("Access-Control-Allow-Credentials: true");
 header('Access-Control-Allow-Origin: *');
@@ -149,13 +149,13 @@ else if ($_POST['module'] == 'getAvatar') {
   $avatar->updateAvatar();
 
 
-  $_SESSION["idAvatar"]=$idAvatar;;
+  //$_SESSION["idAvatar"]=$idAvatar;;
   echo $idAvatar;
 }
 
 else if ($_POST['module'] == 'setAvatar') {
   echo "STRING STRING SSTRING";
-  echo $_SESSION["idAvatar"]."JULI POR FAVOR QUE NOS FUNCIONE";
+  //echo $_SESSION["idAvatar"]."JULI POR FAVOR QUE NOS FUNCIONE";
 }
 
 
