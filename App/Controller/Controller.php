@@ -151,7 +151,7 @@ else if ($_POST['module'] == 'getAvatar') {
 
 else if ($_POST['module'] == 'setAvatar') {
   session_start();
-  echo $_SESSION["idAvatar"];
+  echo $_SESSION["idAvatar"]."KLFDSDJA     SLDKJFASL     SDLKFJA    LKSDJDF   LKASDDJFD";
 }
 
 
