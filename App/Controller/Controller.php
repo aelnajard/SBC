@@ -147,7 +147,6 @@ else if ($_POST['module'] == 'getAvatar') {
 
   session_start();
   $_SESSION["idAvatar"]=$idAvatar;
-
   echo $idAvatar;
 }
 
