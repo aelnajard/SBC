@@ -136,7 +136,7 @@ else if ($_POST['module'] == 'unityLoginData') {
 
 }
 
-else if ($_POST['module'] == 'getAvatar') {
+else if ($_POST['module'] == 'setAvatar') {
   $avatar = new Avatars(new Database());
   $avatar->setAvatar($_POST['avatar']);
   $idAvatar = ($avatar->getAvatar()[0]->idAvatars);
@@ -148,7 +148,8 @@ else if ($_POST['module'] == 'getAvatar') {
   echo $idAvatar;
 }
 
-else if ($_POST['module'] == 'setAvatar') {
+else if ($_POST['module'] == 'getAvatar') {
+
 }
 
 
