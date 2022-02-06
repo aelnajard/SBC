@@ -142,12 +142,14 @@ else if ($_POST['module'] == 'setAvatar') {
   $avatar = new Avatars(new Database());
   $avatar->setIdAvatar($idAvatar);
   $avatar->updateAvatar();
-
+  session_start();
+  $_SESSION['idAvatar'] = $idAvatar;
   echo $idAvatar;
 }
 
 else if ($_POST['module'] == 'getAvatar') {
-
+  session_start();
+  echo $_SESSION['idAvatar'];
 }
 
 
