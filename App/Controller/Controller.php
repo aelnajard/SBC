@@ -132,8 +132,6 @@ else if ($_POST['module'] == 'unityLoginData') {
       $userActions->setIdUserActions($idUserActions);
       $userActions->setTimeLogin($timeLogin);
       $userActions->updateTimeLogin();
-
-
 }
 
 else if ($_POST['module'] == 'setAvatar') {
