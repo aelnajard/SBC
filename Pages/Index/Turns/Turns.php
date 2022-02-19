@@ -10,6 +10,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 600px;
+    background-color: green;
 
   }
   .daysContainer{
