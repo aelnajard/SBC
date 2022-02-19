@@ -15,6 +15,7 @@
   .daysContainer{
     height: 200px;
     width: 200px;
+    min-width: 150px;
     margin: 7px;
     background-color: blue;
   }
