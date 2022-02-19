@@ -3,6 +3,7 @@
     position: relative;
     background-color: #0E7C7B;
     padding: 40px;
+    flex-wrap: wrap;
   }
   .selectDay, .selecttime{
     position: relative;
