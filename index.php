@@ -228,6 +228,9 @@
 
 	 </section>
 
+
+
+<h1>Espero que  este sea el problema :(  </h1>
 	 <?php include  "Pages/Index/Turns" ?>
 
 
