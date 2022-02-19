@@ -2,7 +2,7 @@
   .turns{
     position: relative;
     background-color: #0E7C7B;
-    padding: 40px;
+    padding: 0px;
   }
   .selectDay, .selecttime{
     position: relative;
