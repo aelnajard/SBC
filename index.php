@@ -105,7 +105,7 @@
 
 	<section class="Banner-Sec">
 		<div class="Banner-Pic">
-			<button id="download" type="button" name="button">Descargar</button>
+			<button id="download" type="button" name="button">Descargar2</button>
 
 			<div class="Banner-Txt">
 				<img src="images/SBC-Logo.png">
