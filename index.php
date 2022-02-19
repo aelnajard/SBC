@@ -438,7 +438,7 @@ document.getElementById('download').addEventListener('click', e => {
 			module: "download"
 		},
 		success: function(data){
-			alert(data);
+		//	alert(data);
 	 }
 	}
  )

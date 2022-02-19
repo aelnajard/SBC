@@ -9,13 +9,13 @@
     position: relative;
     padding: 0px;
     display: flex;
-    background-color: red;
     justify-content: center;
+
   }
   .daysContainer{
     height: 200px;
     width: 200px;
-    min-width: 150px;
+    min-width: 200px;
     margin: 7px;
     background-color: blue;
   }
