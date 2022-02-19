@@ -10,15 +10,15 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 600px;
     background-color: green;
+    width: 90vw;
 
   }
   .daysContainer{
     position: relative;
     height: 200px;
     width: 200px;
-    min-width: 200px;
+    min-width: 150px;
     margin: 7px;
     background-color: blue;
   }
