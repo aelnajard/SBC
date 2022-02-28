@@ -101,11 +101,22 @@
           				 drop-shadow(-1px -1px 4px white);
 			}
 
+			.downloadAppButton{
+				position: absolute;
+				padding: 10px 20px;
+				cursor: pointer;
+				font-size: 1em;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 10;
+			}
+
 	</style>
 
 	<section class="Banner-Sec">
 		<div class="Banner-Pic">
-			<button id="download" type="button" name="button">Descargar2</button>
+			<button class="downloadAppButton" id="download" type="button" name="button">Descargar</button>
 
 			<div class="Banner-Txt">
 				<img src="images/SBC-Logo.png">
@@ -129,6 +140,7 @@
 			background: #062537;
 			height: fit-content;
 			padding: 50px 0 120px 0;
+			width: 100vw;
 		}
 		.Welcome h1,h2 {
 			margin: 0px;
@@ -139,7 +151,8 @@
 			left: 50%;
 			margin-top: 50px;
 			transform: translateX(-50%);
-			width: 700px;
+			width: 80vw;
+			max-width: 700px;
 		}
 	</style>
 
@@ -434,6 +447,8 @@ function getIp(){
 }
 
 document.getElementById('download').addEventListener('click', e => {
+
+
 	$.ajax( "App/Controller/Controller.php", {
 		type: 'post',
 		async: false,
@@ -445,6 +460,8 @@ document.getElementById('download').addEventListener('click', e => {
 	 }
 	}
  )
+
+ 	window.open("https://icedrive.net/s/ZRARjYPYj7kXS675BSwQtjaX7uz7", "_self");
 }
 );
 

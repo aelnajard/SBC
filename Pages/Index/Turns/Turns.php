@@ -510,7 +510,8 @@
                 NITValue: NITValue + DVUserTurn,
                 companyUserTurn: companyUserTurn,
                 PositionInCompanyUserTurn: PositionInCompanyUserTurn,
-                PhoneUserTurn: PhoneUserTurn
+                PhoneUserTurn: PhoneUserTurn,
+                date:date
           		},
           		success: function(data){
           			alert(data);

@@ -57,7 +57,7 @@
     </div>
     <div class="appContainerBox">
       <img src="Pages/Index/Download/Mac.png" alt="">
-      <p>1. Descarga la aplicacion para Windows</p>
+      <p>1. Descarga la aplicacion para Mac</p>
 
       <p>2. Descompirme el archivo</p>
 

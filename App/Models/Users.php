@@ -3,16 +3,16 @@
       private $idUser;
       private $NIT;
       private $email;
-      private $phone;
       private $company;
       private $positionCompany;
-
+      private $phone;
+      private $date;
       private $conn;
 
         function __construct($conn) {
             $this->conn = $conn;
         }
-        
+
         function setEmail($email){
           $this->email = $email;
         }
@@ -32,10 +32,14 @@
         function setPhoneNumber($phone){
           $this->phone = $phone;
         }
+        function setDate($date){
+          $this->date = $date;
+        }
 
         function createUser(){
           try{
-            $sql = "INSERT INTO `Users`(`NIT`, `email`)  VALUES ('$this->NIT','$this->email')";
+            $sql = "INSERT INTO `Users`(`name`, `NIT`, `email`,  `phoneNumber`, `TimeAppoiment`, `company`, `positionCompany`)
+            VALUES ('$this->name', '$this->NIT','$this->email', '$this->phone', '$this->date', '$this->company', '$this->positionCompany')";
             $this->conn->conn()->exec($sql);
             $this->conn->close();
               }

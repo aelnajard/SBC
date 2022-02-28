@@ -159,6 +159,7 @@ else if ($_POST['module'] == 'turnsSend'){
   $user->setCompany($_POST['companyUserTurn']);
   $user->setPositionCompany($_POST['PositionInCompanyUserTurn']);
   $user->setPhoneNumber($_POST['PhoneUserTurn']);
+  $user->setDate($_POST['date']);
 
   $user->createUser();
 }
