@@ -155,6 +155,7 @@ else if ($_POST['module'] == 'getAvatar') {
 else if ($_POST['module'] == 'turnsSend'){
   $user = new Users(new Database());
 
+  $user->setName($_POST['name']);
   $user->setEmail($_POST['email']);
   $user->setNIT($_POST['NITValue']);
   $user->setCompany($_POST['companyUserTurn']);

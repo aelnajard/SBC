@@ -1,6 +1,7 @@
 <?php
     class Users {
       private $idUser;
+      private $name;
       private $NIT;
       private $email;
       private $company;
@@ -16,6 +17,10 @@
         function setEmail($email){
           $this->email = $email;
           echo $this->email;
+        }
+        function setName($name){
+          $this->name = $name;
+          echo $this->name;
         }
 
         function setNIT($NIT){
@@ -43,7 +48,7 @@
         }
 
         function createUser(){
-        /*  try{
+         try{
             $sql = "INSERT INTO `Users`(`name`, `NIT`, `email`,  `phoneNumber`, `TimeAppoiment`, `company`, `positionCompany`)
             VALUES ('$this->name', '$this->NIT','$this->email', '$this->phone', '$this->date', '$this->company', '$this->positionCompany')";
             $this->conn->conn()->exec($sql);
@@ -51,7 +56,7 @@
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
-            }*/
+            }
         }
 
         function lastIdUser(){
