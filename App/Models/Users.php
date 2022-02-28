@@ -4,17 +4,35 @@
       private $NIT;
       private $email;
       private $phone;
+      private $company;
+      private $positionCompany;
+
       private $conn;
 
         function __construct($conn) {
             $this->conn = $conn;
         }
+        
         function setEmail($email){
           $this->email = $email;
         }
+
         function setNIT($NIT){
           $this->NIT = $NIT;
         }
+
+        function setCompany($company){
+          $this->company = $company;
+        }
+
+        function setPositionCompany($positionCompany){
+          $this->positionCompany = $positionCompany;
+        }
+
+        function setPhoneNumber($phone){
+          $this->phone = $phone;
+        }
+
         function createUser(){
           try{
             $sql = "INSERT INTO `Users`(`NIT`, `email`)  VALUES ('$this->NIT','$this->email')";

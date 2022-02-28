@@ -17,8 +17,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 90vw;
-    max-width: 840px;
+    width: 95vw;
+    max-width: 1040px;
   }
   .selecttime, .formTurns{
     display: none;
@@ -40,7 +40,6 @@
     background-color: #062537;
     cursor: pointer;
     transition: all .4s;
-
   }
 
   .daysContainer:hover{
@@ -309,32 +308,72 @@
       <h3 class="timeValue">08:00 - 09:00</h3>
     </div>
     <div class="timesContainer">
+      <h3 class="timeValue">08:20 - 09:20</h3>
+    </div>
+    <div class="timesContainer">
+      <h3 class="timeValue">08:40 - 09:40</h3>
+    </div>
+    <div class="timesContainer">
       <h3 class="timeValue">09:00 - 10:00</h3>
+    </div>
+    <div class="timesContainer">
+      <h3 class="timeValue">09:20 - 10:20</h3>
+    </div>
+    <div class="timesContainer">
+      <h3 class="timeValue">09:40 - 10:40</h3>
     </div>
     <div class="timesContainer">
       <h3 class="timeValue">10:00 - 11:00</h3>
     </div>
     <div class="timesContainer">
-      <h3 class="timeValue">11:00 - 12:00</h3>
+      <h3 class="timeValue">10:20 - 11:20</h3>
     </div>
     <div class="timesContainer">
-      <h3 class="timeValue">12:00 - 13:00</h3>
+      <h3 class="timeValue">10:40 - 11:40</h3>
+    </div>
+    <div class="timesContainer">
+      <h3 class="timeValue">11:00 - 12:00</h3>
     </div>
     <div class="timesContainer">
       <h3 class="timeValue">13:00 - 14:00</h3>
     </div>
     <div class="timesContainer">
+      <h3 class="timeValue">-13:20 - 14:20</h3>
+    </div>
+    <div class="timesContainer">
+      <h3 class="timeValue">13:40 - 14:40</h3>
+    </div>
+    <div class="timesContainer">
       <h3 class="timeValue">14:00 - 15:00</h3>
+    </div>
+    <div class="timesContainer">
+      <h3 class="timeValue">14:20 - 15:20</h3>
+    </div>
+    <div class="timesContainer">
+      <h3 class="timeValue">14:40 - 15:40</h3>
     </div>
     <div class="timesContainer">
       <h3 class="timeValue">15:00 - 16:00</h3>
     </div>
     <div class="timesContainer">
+      <h3 class="timeValue">15:20 - 16:20</h3>
+    </div>
+    <div class="timesContainer">
+      <h3 class="timeValue">15:40 - 16:40</h3>
+    </div>
+    <div class="timesContainer">
       <h3 class="timeValue">16:00 - 17:00</h3>
+    </div>
+    <div class="timesContainer">
+      <h3 class="timeValue">16:20 - 17:20</h3>
+    </div>
+    <div class="timesContainer">
+      <h3 class="timeValue">16:40 - 17:40</h3>
     </div>
     <div class="timesContainer">
       <h3 class="timeValue">17:00 - 18:00</h3>
     </div>
+
     <div  class="timesContainerButton">
       <button id="comeBackToDate" type="button" name="button"> Regresar </button>
     </div>
@@ -344,24 +383,41 @@
 
   <div class="formTurns">
     <h3> 3. Regalanos la siguiente información:</h3>
+
     <div class="inputContainerTurns">
       <h4>Nombre</h4>
       <input id="nameUserTurn" type="text" name="" value="">
     </div>
+
     <div class="inputContainerTurns">
       <h4>Correo de impresistem</h4>
       <input id="emailUserTurn" type="text" name="" value="">
     </div>
+
+    <div class="inputContainerTurns">
+      <h4>Empresa</h4>
+      <input id="companyUserTurn" type="text" name="" value="">
+    </div>
+
+    <div class="inputContainerTurns">
+      <h4>Cargo en la empresa</h4>
+      <input id="PositionInCompanyUserTurn" type="text" name="" value="">
+    </div>
+
+    <div class="inputContainerTurns">
+      <h4>Número telefónico</h4>
+      <input id="PhoneUserTurn" type="text" name="" value="">
+    </div>
+
     <div class="inputContainerTurns2">
       <h4>NIT de la empresa</h4>
-
       <div class="groupNIT">
         <input id="NITUserTurn" type="text" name="" value="">
         <h5>-</h5>
         <input id="DVUserTurn" type="text" name="" value="">
       </div>
-
     </div>
+
     <div class="inputContainerTurns">
       <button id="sendData" type="button" name="button">Enviar</button>
     </div>
@@ -433,11 +489,36 @@
       var  email = document.getElementById('emailUserTurn').value;
       var  NITValue = document.getElementById('NITUserTurn').value;
       var  DVUserTurn = document.getElementById('DVUserTurn').value;
+      var  companyUserTurn = document.getElementById('companyUserTurn').value;
+      var  PositionInCompanyUserTurn = document.getElementById('PositionInCompanyUserTurn').value;
+      var  PhoneUserTurn = document.getElementById('PhoneUserTurn').value;
 
-      if (name != "" || email != "" || NITValue != "" || DVUserTurn != "") {
-        if (email.search("@")!= -1 ) {
+
+      if (name != "" && email != "" && NITValue != "" && DVUserTurn != ""
+      && companyUserTurn  != "" && PositionInCompanyUserTurn != "" && PhoneUserTurn != "" ) {
+        if (email.search("@")!= -1) {
           if (!isNaN(NITValue+DVUserTurn)) {
-               alert(date + "    " + name + email + NITValue + DVUserTurn);
+
+
+            $.ajax( "App/Controller/Controller.php", {
+          		type: 'post',
+          		async: false,
+          		data: {
+          			module: "turnsSend",
+                name:name,
+                email:email,
+                NITValue: NITValue + DVUserTurn,
+                companyUserTurn: companyUserTurn,
+                PositionInCompanyUserTurn: PositionInCompanyUserTurn,
+                PhoneUserTurn: PhoneUserTurn
+          		},
+          		success: function(data){
+          			alert(data);
+          	 }
+          	}
+           )
+
+              //alert(date + "    " + name + email + NITValue + DVUserTurn + companyUserTurn + PositionInCompanyUserTurn + PhoneUserTurn);
           }
           else {
             alert("El NIT que ingresaste debe ser un número");

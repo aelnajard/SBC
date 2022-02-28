@@ -183,7 +183,7 @@
 
 	</style>
 
-	<section class="ToDo">
+<!--	<section class="ToDo">
 
 		<h2> Que tipo de cosas puedes hacer? </h2>
 
@@ -227,9 +227,12 @@
 		</div>
 
 	 </section>
+ -->
 
-
+   <?php include  "Pages/Index/WhatToDo/WhatToDo.php" ?>
 	 <?php include  "Pages/Index/Turns/Turns.php" ?>
+	 <?php include  "Pages/Index/Download/Download.php" ?>
+
 
 
 
@@ -328,7 +331,7 @@
 
 
 	</style>
-
+<!--
 	<section class="App">
 		<div class="App-Wrap">
 		 <h2> Descarga nuestra App </h2>
@@ -390,7 +393,7 @@
 	 </section>
 
 
-
+-->
 
 	 <style type="text/css">
 	 	.Footer {
@@ -449,7 +452,5 @@ document.getElementById('download').addEventListener('click', e => {
 </script>
 
 
-
-</script>
 </body>
 </html>
