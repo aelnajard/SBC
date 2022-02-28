@@ -27,17 +27,17 @@ justify-content: center;
   <h2>Que tipo de cosas puedes hacer?</h2>
   <div class="containerWhatToDo">
     <div class="whatToDoBox">
-      <h3>1. Hablar con representantes de marca</h3>
+      <h3>1. Conversar con otros invitados</h3>
       <p>Lorem Ipsum has been the industry's standard
         dummy text ever since the 1500s, when an unknown
         printer took a galley of type.</p>
 
-        <h3>3. Hablar con representantes de marca</h3>
+        <h3>2. Visualizar videos</h3>
         <p>Lorem Ipsum has been the industry's standard
           dummy text ever since the 1500s, when an unknown
            printer took a galley of type.</p>
 
-           <h3>5. Hablar con representantes de marca</h3>
+           <h3>3. Asistir a video-conferencias en vivo o pre-grabadas</h3>
            <p>Lorem Ipsum has been the industry's standard
              dummy text ever since the 1500s, when an unknown
              printer took a galley of type and scrambled it to
@@ -45,17 +45,17 @@ justify-content: center;
 
     </div>
     <div class="whatToDoBox">
-      <h3>2. Ver nuestros Stands</h3>
+      <h3>4. Visualizar nuestros productos en 3D</h3>
       <p>Lorem Ipsum has been the industry's
          standard dummy text ever since the 1500s,
           when an unknown printer took a galley of type.</p>
 
-          <h3>4. Ver nuestros Stands</h3>
+          <h3>5. Ver productos en realidad aumentada</h3>
           <p>Lorem Ipsum has been the industry's s
             tandard dummy text ever since the 1500s,
              when an unknown printer took a galley of type.</p>
 
-             <h3>6. Ver nuestros Stands</h3>
+             <h3>6. Agregar productos al carrito para comprar en linea</h3>
              <p>Lorem Ipsum has been the industry's s
                tandard dummy text ever since the 1500s,
                 when an unknown printer took a galley of type.</p>
