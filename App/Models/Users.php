@@ -15,29 +15,35 @@
 
         function setEmail($email){
           $this->email = $email;
+          echo $this->email;
         }
 
         function setNIT($NIT){
           $this->NIT = $NIT;
+          echo $this->NIT;
         }
 
         function setCompany($company){
           $this->company = $company;
+          echo $this->company;
         }
 
         function setPositionCompany($positionCompany){
           $this->positionCompany = $positionCompany;
+          echo $this->positionCompany;
         }
 
         function setPhoneNumber($phone){
           $this->phone = $phone;
+          echo $this->phone;
         }
         function setDate($date){
           $this->date = $date;
+          echo $this->date;
         }
 
         function createUser(){
-          try{
+        /*  try{
             $sql = "INSERT INTO `Users`(`name`, `NIT`, `email`,  `phoneNumber`, `TimeAppoiment`, `company`, `positionCompany`)
             VALUES ('$this->name', '$this->NIT','$this->email', '$this->phone', '$this->date', '$this->company', '$this->positionCompany')";
             $this->conn->conn()->exec($sql);
@@ -45,7 +51,7 @@
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
-            }
+            }*/
         }
 
         function lastIdUser(){
