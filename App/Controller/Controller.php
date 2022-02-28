@@ -155,14 +155,14 @@ else if ($_POST['module'] == 'getAvatar') {
 else if ($_POST['module'] == 'turnsSend'){
   $user = new Users(new Database());
 
-  /*$user->setEmail($_POST['email']);
+  $user->setEmail($_POST['email']);
   $user->setNIT($_POST['NITValue']);
   $user->setCompany($_POST['companyUserTurn']);
   $user->setPositionCompany($_POST['PositionInCompanyUserTurn']);
   $user->setPhoneNumber($_POST['PhoneUserTurn']);
   $user->setDate($_POST['date']);
 
-  $user->createUser();*/
+  $user->createUser();
 }
 
 //
