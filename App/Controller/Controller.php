@@ -156,9 +156,12 @@ else if ($_POST['module'] == 'turnsSend'){
   $user = new Users(new Database());
   $user->setEmail($_POST['email']);
   $user->setNIT($_POST['NITValue']);
-  $var =  $user->readUserExist()["COUNT(*)"];
+$var =  $user->readUserExist()["COUNT(*)"];
 
-echo $var;
+  if ($var > 0) {
+    echo "ddjflsdkdjflaskjdflasjd";
+  }
+
 
 
 
