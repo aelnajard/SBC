@@ -54,8 +54,7 @@
         }
 
         function readUserExist(){
-          echo "string";
-        /* try{
+         try{
           $sql = $this->con->conn()->query("SELECT COUNT(*)  FROM `Users` WHERE email = '$this->email'
           AND NIT = '$this->NIT'");
             $data = $sql->fetch(PDO::FETCH_ASSOC);
@@ -64,7 +63,7 @@
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
-            }*/
+            }
         }
 
         function lastIdUser(){
