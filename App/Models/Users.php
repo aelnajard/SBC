@@ -55,9 +55,10 @@
 
         function readUserExist(){
          try{
-           $sql = $this->conn->conn()->query("SELECT `idUser` FROM `Users` ORDER BY `idUser`DESC LIMIT 1  ");
+           $sql = $this->conn->conn()->query("SELECT * FROM `Users` ORDER BY `idUser`DESC LIMIT 1  ");
 
-
+        /*  $sql = $this->con->conn()->query("SELECT COUNT(*)  FROM `Users` WHERE `email` = '$this->email'
+          AND `NIT` = '$this->NIT'");*/
           $data = $sql->fetch(PDO::FETCH_OBJ);
           $this->conn->close();
           return $data;
