@@ -156,7 +156,7 @@ else if ($_POST['module'] == 'turnsSend'){
   $user = new Users(new Database());
   $user->setEmail($_POST['email']);
   $user->setNIT($_POST['NITValue']);
-  // $user->readUserExist();
+  $user->readUserExist();
 
 
 
