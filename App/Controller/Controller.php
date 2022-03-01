@@ -156,7 +156,7 @@ else if ($_POST['module'] == 'turnsSend'){
   $user = new Users(new Database());
   $user->setEmail($_POST['email']);
   $user->setNIT($_POST['NITValue']);
-echo json_encode  ($user->readUserExist());
+echo json_encode  ($user->readUserExist()[COUNT(*)]);
 
 
 
