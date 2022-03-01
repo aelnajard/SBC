@@ -156,12 +156,18 @@ else if ($_POST['module'] == 'turnsSend'){
   $user = new Users(new Database());
   $user->setEmail($_POST['email']);
   $user->setNIT($_POST['NITValue']);
-$var =  $user->readUserExist()["COUNT(*)"];
+  $existUser =  $user->readUserExist()["COUNT(*)"];
 
-  echo $var;
+  echo $existUser;
 
-  if ($var > 0) {
-    echo "ddjflsdkdjflaskjdflasjd";
+  if ($existUser > 0) {
+    echo "El usuario ya  existe";
+  }
+  elseif ($existUser < 0) {
+    echo "El usuario no esiste";
+  }
+  else {
+    echo "Se ha presentado una inconsistencia, por favor intente de nuevo";
   }
 
 
