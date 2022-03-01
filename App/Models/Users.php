@@ -36,7 +36,7 @@
         function setPhoneNumber($phone){
           $this->phone = $phone;
         }
-        
+
         function setDate($date){
           $this->date = $date;
         }
@@ -54,7 +54,8 @@
         }
 
         function readUserExist(){
-         try{
+          echo "string";
+        /* try{
           $sql = $this->con->conn()->query("SELECT COUNT(*)  FROM `Users` WHERE email = '$this->email'
           AND NIT = '$this->NIT'");
             $data = $sql->fetch(PDO::FETCH_ASSOC);
@@ -63,7 +64,7 @@
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
-            }
+            }*/
         }
 
         function lastIdUser(){
