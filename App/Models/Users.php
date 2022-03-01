@@ -73,12 +73,7 @@
           try{
             $sql = "UPDATE
             `Users`
-            SET `name` =  '$this->name',
-            SET `NIT` =  '$this->NIT',
-            SET `email` =  '$this->email',
-            SET `TimeAppoiment` =  '$this->date',
-            SET `company` =  '$this->company',
-            SET `positionCompany` =  '$this->positionCompany'
+            SET `name` =  '$this->name'
 
             WHERE `email` = '$this->email'
             ";
