@@ -54,9 +54,9 @@
   <p>a partir del 17 de marzo... y sigue los siguientes pasos para instalarla</p>
   <div class="downloadAppContainer">
     <div class="appContainerBox">
-      <img src="Pages/Index/Download/Win.png" alt="">
+      <a href="https://www.smartbusinesscenter.net"><img src="Pages/Index/Download/Win.png" alt=""></a>
       <div class="containerPDownload">
-        <p>1. Descarga la aplicacion para Windows</p><a href="https://www.smartbusinesscenter.net"> Descarga</a>
+        <p>1. Descarga la aplicacion para Windows</p>
 
         <p>2. Descomprime el archivo</p>
 
@@ -65,9 +65,9 @@
 
     </div>
     <div class="appContainerBox">
-      <img src="Pages/Index/Download/Mac.png" alt="">
+      <a href="https://www.smartbusinesscenter.net"><img src="Pages/Index/Download/Mac.png" alt=""></a>
       <div class="containerPDownload">
-        <p>1. Descarga la aplicacion para Mac</p> <a href="https://www.smartbusinesscenter.net"> Descarga</a>
+        <p>1. Descarga la aplicacion para Mac</p>
 
         <p>2. Descomprime el archivo</p>
 
