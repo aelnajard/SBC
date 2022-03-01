@@ -55,11 +55,11 @@
 
         function readUserExist(){
          try{
-          $sql = $this->con->conn()->query("SELECT COUNT(*)  FROM `Users` WHERE email = '$this->email'
-          AND NIT = '$this->NIT'");
-            $data = $sql->fetch(PDO::FETCH_ASSOC);
-            $this->con->close();
-            return $data;
+          $sql = $this->con->conn()->query("SELECT COUNT(*)  FROM `Users` WHERE `email` = '$this->email'
+          AND `NIT` = '$this->NIT'");
+          $data = $sql->fetch(PDO::FETCH_OBJ);
+          $this->conn->close();
+          return $data;
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
