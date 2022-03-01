@@ -66,13 +66,10 @@
             }
         }
 
-        $sql = "INSERT INTO `Users`(`name`, `NIT`, `email`,  `phoneNumber`, `TimeAppoiment`, `company`, `positionCompany`)
-        VALUES ('$this->name', '$this->NIT','$this->email', '$this->phone', '$this->date', '$this->company', '$this->positionCompany')";
-        $this->conn->conn()->exec($sql);
+
 
         function updateUser(){
-          echo "entramos";
-        /*  try{
+          try{
             $sql = "UPDATE
             `Users`
             SET `name` =  '$this->name',
@@ -89,7 +86,7 @@
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
-            }*/
+            }
         }
 
         function lastIdUser(){
