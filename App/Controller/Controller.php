@@ -164,7 +164,18 @@ else if ($_POST['module'] == 'turnsSend'){
     echo "El usuario ya  existe";
   }
   elseif ($existUser == 0) {
-    echo "El usuario no esiste";
+    $user = new Users(new Database());
+
+     $user->setName($_POST['name']);
+     $user->setEmail($_POST['email']);
+     $user->setNIT($_POST['NITValue']);
+     $user->setCompany($_POST['companyUserTurn']);
+     $user->setPositionCompany($_POST['PositionInCompanyUserTurn']);
+     $user->setPhoneNumber($_POST['PhoneUserTurn']);
+     $user->setDate($_POST['date']);
+
+     $user->createUser();
+    echo $_POST['name']. " tu turno ha sido creado correctamente para la fecha: ". $_POST['date'];
   }
   else {
     echo "Se ha presentado una inconsistencia, por favor intente de nuevo";
@@ -175,17 +186,7 @@ else if ($_POST['module'] == 'turnsSend'){
 
 
 
-/*  $user = new Users(new Database());
-
-  $user->setName($_POST['name']);
-  $user->setEmail($_POST['email']);
-  $user->setNIT($_POST['NITValue']);
-  $user->setCompany($_POST['companyUserTurn']);
-  $user->setPositionCompany($_POST['PositionInCompanyUserTurn']);
-  $user->setPhoneNumber($_POST['PhoneUserTurn']);
-  $user->setDate($_POST['date']);
-
-  $user->createUser();*/
+/* */
 }
 
 //
