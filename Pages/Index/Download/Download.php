@@ -39,6 +39,12 @@
     transform: translateX(-50%);
     margin-bottom: 20px;
   }
+  .containerPDownload{
+    position: relative;
+    width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .appContainerBox p{
     text-align: left;
   }
@@ -49,19 +55,25 @@
   <div class="downloadAppContainer">
     <div class="appContainerBox">
       <img src="Pages/Index/Download/Win.png" alt="">
-      <p>1. Descarga la aplicacion para Windows</p>
+      <div class="containerPDownload">
+        <p>1. Descarga la aplicacion para Windows</p>
 
-      <p>2. Descompirme el archivo</p>
+        <p>2. Descomprime el archivo</p>
 
-      <p>3. Doble-click en impresistem.exe</p>
+        <p>3. Doble-click en impresistem.exe</p>
+      </div>
+
     </div>
     <div class="appContainerBox">
       <img src="Pages/Index/Download/Mac.png" alt="">
-      <p>1. Descarga la aplicacion para Mac</p>
+      <div class="containerPDownload">
+        <p>1. Descarga la aplicacion para Mac</p>
 
-      <p>2. Descompirme el archivo</p>
+        <p>2. Descomprime el archivo</p>
 
-      <p>3. Doble-click en impresistem.app</p>
+        <p>3. Doble-click en impresistem.app</p>
+
+      </div>
 
     </div>
 

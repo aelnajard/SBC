@@ -62,7 +62,9 @@
 			align-items: center;
 			height: 100vh;
 
-			background: linear-gradient(rgba(233, 201, 31, 1), rgba(6, 37, 55, 1));
+			/*background: linear-gradient(rgba(233, 201, 31, 1), rgba(6, 37, 55, 1));*/
+			background: linear-gradient(black, #0E7C7B);
+
 		}
 			.Banner-Sec h1 {
 				font-size: 3.5em;
@@ -128,6 +130,7 @@
 
 
 
+	<?php include  "Pages/Index/Turns/Turns.php" ?>
 
 
 
@@ -161,7 +164,9 @@
 		<h1> Bienvenidos a nuestra </h1>
 		<h2> feria virtual </h2>
 
-		 <video controls="controls" src="Vieos/Videoferia.mp4" poster=""> </video>
+		 <iframe  style=" width: 85vw; height: 50vw; position: relative; left: 50%; transform: translateX(-50%); margin: 60px 0px 0px 0px; max-width: 725px; max-height: 425px; "
+		 	src="https://www.youtube.com/embed/kcDuY7-HeHk">
+		 </iframe>
 
 	 </section>
 
@@ -243,7 +248,6 @@
  -->
 
    <?php include  "Pages/Index/WhatToDo/WhatToDo.php" ?>
-	 <?php include  "Pages/Index/Turns/Turns.php" ?>
 	 <?php include  "Pages/Index/Download/Download.php" ?>
 
 
@@ -311,7 +315,7 @@
 			height: 400px;
 			padding: 5px 50px;
 		}
-		.WinTxt video {
+		.WinTxt frame {
 			position: relative;
 			width: 400px;
 			margin: 30px 0;

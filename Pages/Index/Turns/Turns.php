@@ -40,6 +40,7 @@
     background-color: #062537;
     cursor: pointer;
     transition: all .4s;
+    padding: 18px;
   }
 
   .daysContainer:hover{
