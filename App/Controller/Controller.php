@@ -160,7 +160,8 @@ else if ($_POST['module'] == 'turnsSend'){
 
 
   if ($existUser > 0) {
-    $user = new Users(new Database());
+    echo "quiero llorar";
+  /*  $user = new Users(new Database());
 
      $user->setName($_POST['name']);
      $user->setEmail($_POST['email']);
@@ -171,7 +172,7 @@ else if ($_POST['module'] == 'turnsSend'){
      $user->setDate($_POST['date']);
 
      $user->updateUser();
-     echo $_POST['name']. " tu turno ha sido cambiado correctamente para la fecha: ". $_POST['date'];
+     echo $_POST['name']. " tu turno ha sido cambiado correctamente para la fecha: ". $_POST['date'];*/
   }
   elseif ($existUser == 0) {
      $user = new Users(new Database());
