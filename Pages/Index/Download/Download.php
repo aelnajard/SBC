@@ -56,7 +56,7 @@
     <div class="appContainerBox">
       <img src="Pages/Index/Download/Win.png" alt="">
       <div class="containerPDownload">
-        <p>1. Descarga la aplicacion para Windows</p>
+        <p>1. Descarga la aplicacion para Windows</p><a href="https://www.smartbusinesscenter.net"> Descarga</a>
 
         <p>2. Descomprime el archivo</p>
 
@@ -67,7 +67,7 @@
     <div class="appContainerBox">
       <img src="Pages/Index/Download/Mac.png" alt="">
       <div class="containerPDownload">
-        <p>1. Descarga la aplicacion para Mac</p>
+        <p>1. Descarga la aplicacion para Mac</p> <a href="https://www.smartbusinesscenter.net"> Descarga</a>
 
         <p>2. Descomprime el archivo</p>
 
