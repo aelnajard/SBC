@@ -16,35 +16,29 @@
 
         function setEmail($email){
           $this->email = $email;
-          echo $this->email;
         }
         function setName($name){
           $this->name = $name;
-          echo $this->name;
         }
 
         function setNIT($NIT){
           $this->NIT = $NIT;
-          echo $this->NIT;
         }
 
         function setCompany($company){
           $this->company = $company;
-          echo $this->company;
         }
 
         function setPositionCompany($positionCompany){
           $this->positionCompany = $positionCompany;
-          echo $this->positionCompany;
         }
 
         function setPhoneNumber($phone){
           $this->phone = $phone;
-          echo $this->phone;
         }
+        
         function setDate($date){
           $this->date = $date;
-          echo $this->date;
         }
 
         function createUser(){
@@ -53,6 +47,19 @@
             VALUES ('$this->name', '$this->NIT','$this->email', '$this->phone', '$this->date', '$this->company', '$this->positionCompany')";
             $this->conn->conn()->exec($sql);
             $this->conn->close();
+              }
+          catch(PDOException $e){
+              echo $query . "<br>" . $e->getMessage();
+            }
+        }
+
+        function readUserExist(){
+         try{
+          $sql = $this->con->conn()->query("SELECT COUNT(*)  FROM `Users` WHERE email = '$this->email'
+          AND NIT = '$this->NIT'");
+            $data = $sql->fetch(PDO::FETCH_ASSOC);
+            $this->con->close();
+            return $data;
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
@@ -73,7 +80,6 @@
 
 
 
-        //
 
 
 
@@ -121,18 +127,7 @@
         }
 
 
-        function readUserExist(){
-         try{
-          $sql = $this->con->conn()->query("SELECT COUNT(*)  FROM `Users` WHERE email = '$this->email'
-          AND NIT = '$this->NIT'");
-            $data = $sql->fetch(PDO::FETCH_ASSOC);
-            $this->con->close();
-            return $data;
-              }
-          catch(PDOException $e){
-              echo $query . "<br>" . $e->getMessage();
-            }
-        }
+
 
 
 
