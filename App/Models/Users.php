@@ -70,7 +70,7 @@
 
         function updateUser(){
           echo "hahahahaahahldkfjalsk";
-        /*  try{
+          try{
             $sql = "UPDATE
             `Users`
             SET `name` =  '$this->name',
@@ -87,7 +87,7 @@
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
-            }*/
+            }
         }
 
         function lastIdUser(){
