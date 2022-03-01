@@ -158,6 +158,8 @@ else if ($_POST['module'] == 'turnsSend'){
   $user->setNIT($_POST['NITValue']);
 $var =  $user->readUserExist()["COUNT(*)"];
 
+  echo $var;
+
   if ($var > 0) {
     echo "ddjflsdkdjflaskjdflasjd";
   }
