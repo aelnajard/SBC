@@ -57,12 +57,34 @@
         function readUserExist(){
          try{
            $sql = $this->conn->conn()->query("SELECT COUNT(*) FROM `Users`  WHERE `email` = '$this->email'");
-
-        /*  $sql = $this->con->conn()->query("SELECT COUNT(*)  FROM `Users` WHERE `email` = '$this->email'
-          AND `NIT` = '$this->NIT'");*/
           $data = $sql->fetch(PDO::FETCH_ASSOC);
           $this->conn->close();
           return $data;
+              }
+          catch(PDOException $e){
+              echo $query . "<br>" . $e->getMessage();
+            }
+        }
+
+        $sql = "INSERT INTO `Users`(`name`, `NIT`, `email`,  `phoneNumber`, `TimeAppoiment`, `company`, `positionCompany`)
+        VALUES ('$this->name', '$this->NIT','$this->email', '$this->phone', '$this->date', '$this->company', '$this->positionCompany')";
+        $this->conn->conn()->exec($sql);
+
+        function updateUser(){
+          try{
+            $sql = "UPDATE
+            `Users`
+            SET `name` =  '$this->name',
+            SET `NIT` =  '$this->NIT',
+            SET `email` =  '$this->email',
+            SET `TimeAppoiment` =  '$this->date',
+            SET `company` =  '$this->company',
+            SET `positionCompany` =  '$this->positionCompany'
+
+            WHERE `email` = '$this->email'
+            ";
+            $this->con->conn()->exec($sql);
+            $this->con->close();
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
