@@ -71,7 +71,8 @@
         $this->conn->conn()->exec($sql);
 
         function updateUser(){
-          try{
+          echo "entramos";
+        /*  try{
             $sql = "UPDATE
             `Users`
             SET `name` =  '$this->name',
@@ -88,7 +89,7 @@
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
-            }
+            }*/
         }
 
         function lastIdUser(){
