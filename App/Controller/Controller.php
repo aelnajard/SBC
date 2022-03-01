@@ -163,7 +163,7 @@ else if ($_POST['module'] == 'turnsSend'){
   if ($existUser > 0) {
     echo "El usuario ya  existe";
   }
-  elseif ($existUser < 0) {
+  elseif ($existUser = 0) {
     echo "El usuario no esiste";
   }
   else {
