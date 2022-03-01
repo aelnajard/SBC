@@ -70,12 +70,11 @@
 
         function updateUser(){
           echo "hahahahaahahldkfjalsk";
-        /*  try{
+          try{
             $sql = "UPDATE
             `Users`
             SET `name` =  '$this->name',
              `NIT` =  '$this->NIT',
-             `email` =  '$this->email',
              `TimeAppoiment` =  '$this->date',
              `company` =  '$this->company',
              `positionCompany` =  '$this->positionCompany'
@@ -87,7 +86,7 @@
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
-            }*/
+            }
         }
 
         function lastIdUser(){
