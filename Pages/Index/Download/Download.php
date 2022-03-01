@@ -51,7 +51,7 @@
 </style>
 <section class="downloadApp">
   <h2>Descarga nuestra App </h2>
-  <p>a partir del 17 de marzo ...y sigue los siguientes pasos para instalarla</p>
+  <p>a partir del 17 de marzo... y sigue los siguientes pasos para instalarla</p>
   <div class="downloadAppContainer">
     <div class="appContainerBox">
       <img src="Pages/Index/Download/Win.png" alt="">
