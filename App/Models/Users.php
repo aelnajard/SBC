@@ -80,8 +80,8 @@
 
             WHERE `email` = '$this->email'
             ";
-            $this->con->conn()->exec($sql);
-            $this->con->close();
+            $this->conn->conn()->exec($sql);
+            $this->conn->close();
               }
           catch(PDOException $e){
               echo $query . "<br>" . $e->getMessage();
