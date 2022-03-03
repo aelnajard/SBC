@@ -170,7 +170,7 @@ else if ($_POST['module'] == 'turnsSend'){
      $user->setPhoneNumber($_POST['PhoneUserTurn']);
      $user->setDate($_POST['date']);
 
-    $user->updateUser();
+     $user->updateUser();
      echo $_POST['name']. " tu turno ha sido cambiado correctamente para la fecha: ". $_POST['date'];
   }
   elseif ($existUser == 0) {

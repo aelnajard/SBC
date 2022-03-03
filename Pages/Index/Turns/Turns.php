@@ -516,6 +516,7 @@
           		},
           		success: function(data){
           			alert(data);
+                window.open("https://www.smartbusinesscenter.net","_self")
           	 }
           	}
            )
