@@ -265,12 +265,7 @@
   <div class="selectDay">
     <h3> 1. Seleccona el día que te quede mejor asistir a la feria:</h3>
 
-    <div class="daysContainer">
-      <div class="days">
-        <h3 >Lunes</h3>
-        <h6 class="dayValue">21 de marzo 2022</h6>
-      </div>
-    </div>
+
 
     <div class="daysContainer">
       <div class="days">
