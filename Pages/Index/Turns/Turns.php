@@ -461,9 +461,9 @@
 
       for (let i = 0; i < timesContainer.length; i++) {
 
-        timeVar[i].style.backgroundColor = "red";
+      //  timeVar[i].style.backgroundColor = "red";
 
-        $.ajax( "App/Controller/Controller.php", {
+      /*  $.ajax( "App/Controller/Controller.php", {
           type: 'post',
           async: false,
           data: {
@@ -473,7 +473,7 @@
             alert(data);
          }
         }
-       )
+      )*/
 
         timesContainer[i].addEventListener("click", function(){
           selecttime.display  = "none";
