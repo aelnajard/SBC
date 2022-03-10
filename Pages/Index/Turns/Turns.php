@@ -454,13 +454,35 @@
 
 
       const timesContainer = document.querySelectorAll(".timesContainer");
+
+      const timeVar = document.getElementsByClassName('timesContainer');
+
+
+
       for (let i = 0; i < timesContainer.length; i++) {
+
+        timeVar[i].style.backgroundColor = "red";
+
+        $.ajax( "App/Controller/Controller.php", {
+          type: 'post',
+          async: false,
+          data: {
+            module: "readAvailability",
+          },
+          success: function(data){
+            alert(data);
+         }
+        }
+       )
+
         timesContainer[i].addEventListener("click", function(){
           selecttime.display  = "none";
           formTurns.display  = "block";
-
           time = document.getElementsByClassName('timesContainer')[i].getElementsByClassName('timeValue')[0].textContent;
           })
+
+
+
       }
 
 

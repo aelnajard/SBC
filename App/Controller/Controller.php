@@ -139,6 +139,8 @@ else if ($_POST['module'] == 'setAvatar') {
   $avatar->setAvatar($_POST['avatar']);
   $idAvatar = ($avatar->getAvatar()[0]->idAvatars);
 
+  echo $_POST['avatar']  ."AELNA";
+
   $avatar = new Avatars(new Database());
   $avatar->setIdAvatar($idAvatar);
   $avatar->updateAvatar();
