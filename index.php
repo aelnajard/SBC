@@ -82,8 +82,6 @@
 
 			width: 100%;
 			height: 100%;
-
-
 		}
 
 
@@ -93,6 +91,7 @@
 			width: fit-content;
 			margin: 0 auto;
 		}
+
 			.Banner-Txt img {
 				position: absolute;
 				top: 60px;
@@ -102,8 +101,7 @@
 				filter: drop-shadow(4px 4px 10px rgba(255,255,255, 0.4))
           				 drop-shadow(-1px -1px 4px white);
 			}
-
-			.downloadAppButton{
+			.turnAppButton{
 				position: absolute;
 				padding: 10px 20px;
 				cursor: pointer;
@@ -113,12 +111,30 @@
 				transform: translate(-50%, -50%);
 				z-index: 10;
 			}
+			.downloadAppButton{
+				position: absolute;
+				padding: 10px 20px;
+				cursor: pointer;
+				font-size: 1em;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, 100%);
+				z-index: 10;
+			}
 
 	</style>
 
 	<section class="Banner-Sec">
 		<div class="Banner-Pic">
+			<a href="#turnsSection">
+
+			<button class="turnAppButton" id="turn" type="button" name="button">Apartar turno</button>
+
+			</a>
+
 			<button class="downloadAppButton" id="download" type="button" name="button">Descargar</button>
+
+
 
 			<div class="Banner-Txt">
 				<img src="images/SBC-Logo.png">

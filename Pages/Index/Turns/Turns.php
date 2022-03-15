@@ -71,6 +71,9 @@
     width: 100%;
     text-align:center;
   }
+  .turns  h2{
+    font-size: 2em;
+  }
 
 
 
@@ -259,7 +262,9 @@
 
 </style>
 
-<section class="turns">
+<section id="turnsSection" class="turns">
+  <h2>Registro</h2>
+
   <h1>Reserva tu turno</h1>
 
   <div class="selectDay">
