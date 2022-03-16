@@ -128,7 +128,7 @@
 		<div class="Banner-Pic">
 			<a href="#turnsSection">
 
-			<button class="turnAppButton" id="turn" type="button" name="button">Apartar turno</button>
+			<button class="turnAppButton" id="turn" type="button" name="button">Registrarse</button>
 
 			</a>
 
