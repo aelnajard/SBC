@@ -127,9 +127,7 @@
 	<section class="Banner-Sec">
 		<div class="Banner-Pic">
 			<a href="#turnsSection">
-
 			<button class="turnAppButton" id="turn" type="button" name="button">Registrarse</button>
-
 			</a>
 
 			<button class="downloadAppButton" id="download" type="button" name="button">Descargar</button>
