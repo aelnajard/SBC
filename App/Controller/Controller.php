@@ -149,7 +149,7 @@ else if ($_POST['module'] == 'setAvatar') {
     echo "sera que al menos entramos aca";
     $avatar = new Avatars(new Database());
     $avatar->setAllAvatarsAvailable();
-  //  $idAvatar = readIdAvatar();
+    $idAvatar = readIdAvatar();
   //}
 
     $avatar = new Avatars(new Database());
@@ -164,13 +164,13 @@ else if ($_POST['module'] == 'setAvatar') {
 
 }
 
-function readIdAvatar(){
+/*function readIdAvatar(){
   $avatar = new Avatars(new Database());
   $avatar->setAvatar($_POST['avatar']);
   $idAvatar = ($avatar->getAvatar()[0]->idAvatars);
 
   return $idAvatar;
-}
+}*/
 
 else if ($_POST['module'] == 'getAvatar') {
   session_start();
