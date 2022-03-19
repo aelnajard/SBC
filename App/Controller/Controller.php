@@ -139,7 +139,7 @@ else if ($_POST['module'] == 'setAvatar') {
   $avatar->setAvatar($_POST['avatar']);
   $idAvatar = readIdAvatar();
 
-  if ($idAvatar == 0) {
+  if ($idAvatar == 0 || $idAvatar  ==  "") {
     $avatar = new Avatars(new Database());
     $avatar->setAllAvatarsAvailable();
     $idAvatar = readIdAvatar();
