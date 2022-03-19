@@ -140,6 +140,8 @@ else if ($_POST['module'] == 'setAvatar') {
   $idAvatar = readIdAvatar();
 
   if ($idAvatar == 0 || $idAvatar  ==  "") {
+
+    echo "sera que al menos entramos aca";
     $avatar = new Avatars(new Database());
     $avatar->setAllAvatarsAvailable();
     $idAvatar = readIdAvatar();
