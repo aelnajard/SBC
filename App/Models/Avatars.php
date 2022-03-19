@@ -46,6 +46,21 @@
         }
 
 
+        function setAllAvatarsAvailable(){
+          try{
+            $sql = "UPDATE
+            `Avatars`
+            SET `name` =  '1'
+            ";
+            $this->conn->conn()->exec($sql);
+            $this->conn->close();
+              }
+          catch(PDOException $e){
+              echo $query . "<br>" . $e->getMessage();
+            }
+        }
+
+
 
 
 

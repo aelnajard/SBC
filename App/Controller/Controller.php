@@ -137,15 +137,32 @@ else if ($_POST['module'] == 'unityLoginData') {
 else if ($_POST['module'] == 'setAvatar') {
   $avatar = new Avatars(new Database());
   $avatar->setAvatar($_POST['avatar']);
+  $idAvatar = readIdAvatar();
+
+  if ($idAvatar == 0) {
+    $avatar = new Avatars(new Database());
+    $avatar->setAllAvatarsAvailable();
+    $idAvatar = readIdAvatar();
+  }
+
+    $avatar = new Avatars(new Database());
+    $avatar->setIdAvatar($idAvatar);
+    $avatar->updateAvatar();
+    session_start();
+    $_SESSION['idAvatar'] = $idAvatar;
+    echo $idAvatar;
+
+
+
+
+}
+
+function readIdAvatar(){
+  $avatar = new Avatars(new Database());
+  $avatar->setAvatar($_POST['avatar']);
   $idAvatar = ($avatar->getAvatar()[0]->idAvatars);
 
-
-  $avatar = new Avatars(new Database());
-  $avatar->setIdAvatar($idAvatar);
-  $avatar->updateAvatar();
-  session_start();
-  $_SESSION['idAvatar'] = $idAvatar;
-  echo $idAvatar;
+  return $idAvatar;
 }
 
 else if ($_POST['module'] == 'getAvatar') {
