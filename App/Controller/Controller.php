@@ -134,21 +134,21 @@ else if ($_POST['module'] == 'unityLoginData') {
       $userActions->updateTimeLogin();
 }
 
-function readIdAvatar(){
-  echo "entramos";
+//function readIdAvatar(){
+//  echo "entramos";
   /*$avatar = new Avatars(new Database());
   $avatar->setAvatar($_POST['avatar']);
   $idAvatar = ($avatar->getAvatar()[0]->idAvatars);
 
   return $idAvatar;*/
-}
+//}
 
 else if ($_POST['module'] == 'setAvatar') {
   $avatar = new Avatars(new Database());
   $avatar->setAvatar($_POST['avatar']);
   $idAvatar = ($avatar->getAvatar()[0]->idAvatars);
 
-  readIdAvatar();
+  //readIdAvatar();
 
   echo $idAvatar."Primer paso";
 
