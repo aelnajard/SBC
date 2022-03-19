@@ -139,7 +139,7 @@ else if ($_POST['module'] == 'setAvatar') {
   $avatar->setAvatar($_POST['avatar']);
   $idAvatar = readIdAvatar();
 
-  echo $idAvatar;
+  echo $idAvatar."Primer paso";
 
 
   if ($idAvatar == 0 || $idAvatar  ==  "") {
