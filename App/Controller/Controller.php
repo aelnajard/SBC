@@ -135,22 +135,19 @@ else if ($_POST['module'] == 'unityLoginData') {
 }
 
 else if ($_POST['module'] == 'setAvatar') {
-  $avatar = new Avatars(new Database());
-  $avatar->setAvatar($_POST['avatar']);
-  $idAvatar = ($avatar->getAvatar()[0]->idAvatars);
 
-  //$idAvatar = readIdAvatar();
+  $idAvatar = readIdAvatar();
 
   echo $idAvatar."Primer paso";
 
 
-  //if ($idAvatar == 0 || $idAvatar  ==  "") {
+  if ($idAvatar == 0 || $idAvatar  ==  "") {
 
-    echo "sera que al menos entramos aca";
+    echo "Segundo paso";
     $avatar = new Avatars(new Database());
     $avatar->setAllAvatarsAvailable();
-  //  $idAvatar = readIdAvatar();
-  //}
+    $idAvatar = readIdAvatar();
+  }
 
     $avatar = new Avatars(new Database());
     $avatar->setIdAvatar($idAvatar);
@@ -164,13 +161,13 @@ else if ($_POST['module'] == 'setAvatar') {
 
 }
 
-/*function readIdAvatar(){
+function readIdAvatar(){
   $avatar = new Avatars(new Database());
   $avatar->setAvatar($_POST['avatar']);
   $idAvatar = ($avatar->getAvatar()[0]->idAvatars);
 
   return $idAvatar;
-}*/
+}
 
 else if ($_POST['module'] == 'getAvatar') {
   session_start();
