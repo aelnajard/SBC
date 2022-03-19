@@ -135,8 +135,7 @@ else if ($_POST['module'] == 'unityLoginData') {
 }
 
 else if ($_POST['module'] == 'setAvatar') {
-  $avatar = new Avatars(new Database());
-  $avatar->setAvatar($_POST['avatar']);
+  
   $idAvatar = readIdAvatar();
 
   echo $idAvatar."Primer paso";
