@@ -139,6 +139,9 @@ else if ($_POST['module'] == 'setAvatar') {
   $avatar->setAvatar($_POST['avatar']);
   $idAvatar = readIdAvatar();
 
+  echo $idAvatar;
+
+
   if ($idAvatar == 0 || $idAvatar  ==  "") {
 
     echo "sera que al menos entramos aca";
