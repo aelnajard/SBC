@@ -170,8 +170,8 @@ function readIdAvatar(){
 /*  $avatar = new Avatars(new Database());
   $avatar->setAvatar($_POST['avatar']);
   $idAvatar = ($avatar->getAvatar()[0]->idAvatars);
-
-  return $idAvatar;*/
+*/
+  return "1";
 }
 
 else if ($_POST['module'] == 'getAvatar') {
