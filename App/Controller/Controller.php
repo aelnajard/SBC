@@ -145,6 +145,9 @@ else if ($_POST['module'] == 'unityLoginData') {
     else if ($_POST['module'] == 'getSessionId') {
       echo $_SESSION['sessionId'];
     }
+    else if ($_POST['module'] == 'getClientId') {
+      echo $_SESSION['clientId'];
+    }
 
 
 else if ($_POST['module'] == 'setAvatar') {
