@@ -133,6 +133,8 @@ else if ($_POST['module'] == 'unityLoginData') {
       $userActions->setTimeLogin($timeLogin);
       $userActions->updateTimeLogin();
 
+      echo "esta entrando a controller desde login";
+
   //    session_start();
   //    $_SESSION['sessionId'] = $_POST['sessionId']."RAHASDJFLKDJFLDSJDL";
     }
