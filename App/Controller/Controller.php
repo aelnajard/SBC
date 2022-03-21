@@ -134,8 +134,7 @@ else if ($_POST['module'] == 'unityLoginData') {
       $userActions->updateTimeLogin();
 
       session_start();
-      $_SESSION['sessionId'] = $_POST['sessionId'];
-
+      $_SESSION['sessionId'] = $_POST['sessionId']."RAHASDJFLKDJFLDSJDL";
     }
 
     else if ($_POST['module'] == 'getSessionId') {
