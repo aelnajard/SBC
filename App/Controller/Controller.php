@@ -1,4 +1,5 @@
 <?php
+session_start();
 header("Access-Control-Allow-Credentials: true");
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
@@ -139,11 +140,9 @@ else if ($_POST['module'] == 'unityLoginData') {
     }
 
     else if ($_POST['module'] == 'getSessionId') {
-      session_start();
       echo"please";
     }
     else if ($_POST['module'] == 'createSessionId') {
-      session_start();
       $_SESSION['sessionId'] = $_POST['sessionId'];
       echo $_SESSION['sessionId'];
     }
