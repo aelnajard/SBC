@@ -1,4 +1,5 @@
 <?php
+session_start();
 header("Access-Control-Allow-Credentials: true");
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
@@ -138,16 +139,12 @@ else if ($_POST['module'] == 'unityLoginData') {
       $_SESSION['sessionId'] = $_POST['sessionId'];
       $_SESSION['clientId'] = $_POST['clientId'];
 
+      echo $_SESSION['clientId']."dsjfdlsadkjdflksjdflkjasddlkfdjsldkfjslkdsjfdlksdzjfldkj";
     }
 
     else if ($_POST['module'] == 'getSessionId') {
-      session_start();
-      echo  $_SESSION['sessionId']
+      echo"please";
     }
-  /*  else if ($_POST['module'] == 'getClientId') {
-      session_start();
-      echo  $_SESSION['clientId']
-    }*/
 
 
 else if ($_POST['module'] == 'setAvatar') {
