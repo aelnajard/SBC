@@ -135,17 +135,15 @@ else if ($_POST['module'] == 'unityLoginData') {
       $userActions->updateTimeLogin();
 
 
-  //    session_start();
-  //    $_SESSION['sessionId'] = $_POST['sessionId']."RAHASDJFLKDJFLDSJDL";
+      session_start();
+      $_SESSION['sessionId'] = $_POST['sessionId']."RAHASDJFLKDJFLDSJDL";
+      echo $_SESSION['sessionId'];
     }
 
     else if ($_POST['module'] == 'getSessionId') {
       echo"please";
     }
-    else if ($_POST['module'] == 'createSessionId') {
-      $_SESSION['sessionId'] = $_POST['sessionId'];
-      echo $_SESSION['sessionId'];
-    }
+
 
 else if ($_POST['module'] == 'setAvatar') {
   $avatar = new Avatars(new Database());
