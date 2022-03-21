@@ -133,13 +133,13 @@ else if ($_POST['module'] == 'unityLoginData') {
       $userActions->setTimeLogin($timeLogin);
       $userActions->updateTimeLogin();
 
-      session_start();
-      $_SESSION['sessionId'] = $_POST['sessionId']."RAHASDJFLKDJFLDSJDL";
+  //    session_start();
+  //    $_SESSION['sessionId'] = $_POST['sessionId']."RAHASDJFLKDJFLDSJDL";
     }
 
     else if ($_POST['module'] == 'getSessionId') {
       session_start();
-      echo $_SESSION['sessionId']."please";
+      echo"please";
     }
 
 else if ($_POST['module'] == 'setAvatar') {
