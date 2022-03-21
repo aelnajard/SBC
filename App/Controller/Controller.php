@@ -139,7 +139,7 @@ else if ($_POST['module'] == 'unityLoginData') {
 
     else if ($_POST['module'] == 'getSessionId') {
       session_start();
-      echo $_SESSION['sessionId'];
+      echo $_SESSION['sessionId']."please";
     }
 
 else if ($_POST['module'] == 'setAvatar') {
