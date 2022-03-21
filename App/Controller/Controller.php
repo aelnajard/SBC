@@ -136,8 +136,10 @@ else if ($_POST['module'] == 'unityLoginData') {
 
 
       session_start();
-      $_SESSION['sessionId'] = $_POST['sessionId']."RAHASDJFLKDJFLDSJDL";
-      echo $_SESSION['sessionId'];
+      $_SESSION['sessionId'] = $_POST['sessionId'];
+      $_SESSION['clientId'] = $_POST['clientId'];
+
+      echo $_SESSION['clientId']."dsjfdlsadkjdflksjdflkjasddlkfdjsldkfjslkdsjfdlksdzjfldkj";
     }
 
     else if ($_POST['module'] == 'getSessionId') {
