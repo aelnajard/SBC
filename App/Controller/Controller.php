@@ -72,7 +72,7 @@ else if ($_POST['module'] == 'download') {
 
 
 else if ($_POST['module'] == 'unityLoginData') {
-  /*$geoplugin = new geoPlugin();
+  $geoplugin = new geoPlugin();
   $geoplugin->locate();
   $geoplugin->ip;
 
@@ -131,9 +131,8 @@ else if ($_POST['module'] == 'unityLoginData') {
       $userActions = new UsersActions(new Database());
       $userActions->setIdUserActions($idUserActions);
       $userActions->setTimeLogin($timeLogin);
-      $userActions->updateTimeLogin();*/
+      $userActions->updateTimeLogin();
 
-      echo "esta entrando a controller desde login";
 
   //    session_start();
   //    $_SESSION['sessionId'] = $_POST['sessionId']."RAHASDJFLKDJFLDSJDL";
@@ -142,6 +141,11 @@ else if ($_POST['module'] == 'unityLoginData') {
     else if ($_POST['module'] == 'getSessionId') {
       session_start();
       echo"please";
+    }
+    else if ($_POST['module'] == 'createSessionId') {
+      session_start();
+      $_SESSION['sessionId'] = $_POST['sessionId'];
+      echo $_SESSION['sessionId'];
     }
 
 else if ($_POST['module'] == 'setAvatar') {
