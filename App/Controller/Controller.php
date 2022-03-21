@@ -143,7 +143,7 @@ else if ($_POST['module'] == 'unityLoginData') {
     }
 
     else if ($_POST['module'] == 'getSessionId') {
-      echo"please";
+      echo $_SESSION['sessionId'];
     }
 
 
