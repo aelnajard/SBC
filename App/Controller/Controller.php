@@ -136,7 +136,12 @@ else if ($_POST['module'] == 'unityLoginData') {
       session_start();
       $_SESSION['sessionId'] = $_POST['sessionId'];
 
-}
+    }
+
+    else if ($_POST['module'] == 'getSessionId') {
+      session_start();
+      echo $_SESSION['sessionId'];
+    }
 
 else if ($_POST['module'] == 'setAvatar') {
   $avatar = new Avatars(new Database());
