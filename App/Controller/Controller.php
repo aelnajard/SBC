@@ -72,7 +72,7 @@ else if ($_POST['module'] == 'download') {
 
 
 else if ($_POST['module'] == 'unityLoginData') {
-  $geoplugin = new geoPlugin();
+  /*$geoplugin = new geoPlugin();
   $geoplugin->locate();
   $geoplugin->ip;
 
@@ -131,7 +131,7 @@ else if ($_POST['module'] == 'unityLoginData') {
       $userActions = new UsersActions(new Database());
       $userActions->setIdUserActions($idUserActions);
       $userActions->setTimeLogin($timeLogin);
-      $userActions->updateTimeLogin();
+      $userActions->updateTimeLogin();*/
 
       echo "esta entrando a controller desde login";
 
