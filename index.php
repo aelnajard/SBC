@@ -130,7 +130,7 @@
 			<button class="turnAppButton" id="turn" type="button" name="button">Registrarse</button>
 			</a>
 
-			<button class="downloadAppButton" id="download" type="button" name="button">Descargar</button>
+	<!--		<button class="downloadAppButton" id="download" type="button" name="button">Descargar</button> -->
 
 
 
@@ -464,7 +464,7 @@ function getIp(){
  )
 }
 
-document.getElementById('download').addEventListener('click', e => {
+/*document.getElementById('download').addEventListener('click', e => {
 
 
 	$.ajax( "App/Controller/Controller.php", {
@@ -481,7 +481,7 @@ document.getElementById('download').addEventListener('click', e => {
 
  	window.open("https://icedrive.net/s/ZRARjYPYj7kXS675BSwQtjaX7uz7", "_self");
 }
-);
+);*/
 
 
 </script>
