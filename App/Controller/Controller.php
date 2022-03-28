@@ -200,7 +200,7 @@ else if ($_POST['module'] == 'turnsSend'){
      $user->setDate($_POST['date']);
 
      $user->updateUser();
-     echo $_POST['name']. " tu turno ha sido cambiado correctamente para la fecha: ". $_POST['date'].". Un asesor se contactará contigo pronto para darte las instrucciones";
+     echo $_POST['name']. " tu turno ha sido cambiado correctamente para la fecha: ". $_POST['date'].". Un asesor se contactará contigo pronto para darte las instrucciones.";
   }
   elseif ($existUser == 0) {
      $user = new Users(new Database());
