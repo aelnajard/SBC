@@ -118,6 +118,8 @@ else if ($_POST['module'] == 'unityLoginData') {
          $userActions->setCity($geoplugin->city);
          $userActions->createUserActionIp();
        }
+
+
     }
     else {
       $userActions = new UsersActions(new Database());
@@ -138,14 +140,20 @@ else if ($_POST['module'] == 'unityLoginData') {
       session_start();
       $_SESSION['sessionId'] = $_POST['sessionId'];
       $_SESSION['clientId'] = $_POST['clientId'];
-
+      $_SESSION['email'] = $_POST['email'];
     }
 
     else if ($_POST['module'] == 'getSessionId') {
+      session_start();
       echo $_SESSION['sessionId'];
     }
     else if ($_POST['module'] == 'getClientId') {
+      session_start();
       echo $_SESSION['clientId'];
+    }
+    else if ($_POST['module'] == 'getNameAvatar') {
+      session_start();
+      echo  $_SESSION['email']
     }
 
 
