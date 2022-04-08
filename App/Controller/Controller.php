@@ -153,7 +153,7 @@ else if ($_POST['module'] == 'unityLoginData') {
     }
     else if ($_POST['module'] == 'getNameAvatar') {
       session_start();
-      echo  $_SESSION['email']."hahah";
+      echo  $_SESSION['email'];
     }
 
 
