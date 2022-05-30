@@ -228,12 +228,9 @@ else if ($_POST['module'] == 'turnsSend'){
      echo "Se ha presentado una inconsistencia, por favor intente de nuevo";
   }
 
-
-
-
-
-
-/* */
+}
+else if ($_POST['module'] == 'enableEnterFair') {
+  echo "EnterFair01062022";
 }
 
 //
