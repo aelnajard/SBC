@@ -230,7 +230,8 @@ else if ($_POST['module'] == 'turnsSend'){
 
 }
 else if ($_POST['module'] == 'enableEnterFair') {
-  echo "EnterFair01062022";
+//  echo "EnterFair01062022";
+echo "No entrar";
 }
 
 //
