@@ -175,7 +175,7 @@
 
 	<section class="Welcome">
 
-		<h1> Bienvenidos a nuestra </h1>
+		<h1> Bienvenidos a nuestra  FERIA </h1>
 		<h2> feria virtual </h2>
 
 		 <iframe  style=" width: 85vw; height: 50vw; position: relative; left: 50%; transform: translateX(-50%); margin: 60px 0px 0px 0px; max-width: 725px; max-height: 425px; "
