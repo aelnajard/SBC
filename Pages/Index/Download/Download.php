@@ -55,6 +55,7 @@
   <div class="downloadAppContainer">
     <div class="appContainerBox">
       <a href="https://icedrive.net/s/ZRARjYPYj7kXS675BSwQtjaX7uz7"><img src="Pages/Index/Download/Win.png" alt=""></a>
+      
       <div class="containerPDownload">
         <p>1. Descarga la aplicacion para Windows</p>
 

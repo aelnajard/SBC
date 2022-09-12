@@ -72,7 +72,7 @@
 
 		.Banner-Pic {
 			position: relative;
-			background: url("images/Ban1.png");
+			background: url("images/SBC.gif");
 
 			   -webkit-mask-image: linear-gradient(to top, transparent 0%, black 12%);
 
